@@ -1,0 +1,48 @@
+Zeroize len 0, null
+0:int:0:int:1
+
+Zeroize len 0, non-null
+0:int:0:int:0
+
+Zeroize len 1
+0:int:1:int:0
+
+Zeroize len 4
+0:int:1:int:0
+
+Zeroize len 5
+0:int:1:int:0
+
+Zeroize len 32
+0:int:32:int:0
+
+Zeroize len 127
+0:int:127:int:0
+
+Zeroize len 128
+0:int:128:int:0
+
+Zeroize uninitialised 1 0
+1:int:1:int:0
+
+Zeroize uninitialised 16 0
+1:int:16:int:0
+
+Zeroize uninitialised 16 1
+1:int:16:int:1
+
+Zeroize uninitialised 16 10
+1:int:16:int:10
+
+Zeroize uninitialised 16 15
+1:int:16:int:15
+
+Zeroize uninitialised 128 0
+1:int:128:int:0
+
+Zeroize uninitialised 128 64
+1:int:128:int:64
+
+Zeroize uninitialised 128 127
+1:int:128:int:127
+

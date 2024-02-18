@@ -1,0 +1,9 @@
+Timing: get timer
+0
+
+Timing: delay 0ms
+1:int:0
+
+Timing: delay 100ms
+1:int:100
+

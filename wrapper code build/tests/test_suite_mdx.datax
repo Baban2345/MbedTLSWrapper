@@ -1,0 +1,51 @@
+mbedtls_md5 Test vector RFC1321 #1
+0:char*:"":hex:"d41d8cd98f00b204e9800998ecf8427e"
+
+mbedtls_md5 Test vector RFC1321 #2
+0:char*:"a":hex:"0cc175b9c0f1b6a831c399e269772661"
+
+mbedtls_md5 Test vector RFC1321 #3
+0:char*:"abc":hex:"900150983cd24fb0d6963f7d28e17f72"
+
+mbedtls_md5 Test vector RFC1321 #4
+0:char*:"message digest":hex:"f96b697d7cb7938d525a2f31aaf161d0"
+
+mbedtls_md5 Test vector RFC1321 #5
+0:char*:"abcdefghijklmnopqrstuvwxyz":hex:"c3fcd3d76192e4007dfb496cca67e13b"
+
+mbedtls_md5 Test vector RFC1321 #6
+0:char*:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789":hex:"d174ab98d277d9f5a5611c2c9f419d9f"
+
+mbedtls_md5 Test vector RFC1321 #7
+0:char*:"12345678901234567890123456789012345678901234567890123456789012345678901234567890":hex:"57edf4a22be3c955ac49da2e2107b67a"
+
+mbedtls_ripemd160 Test vector from paper #1
+1:char*:"":hex:"9c1185a5c5e9fc54612808977ee8f548b2258d31"
+
+mbedtls_ripemd160 Test vector from paper #2
+1:char*:"a":hex:"0bdc9d2d256b3ee9daae347be6f4dc835a467ffe"
+
+mbedtls_ripemd160 Test vector from paper #3
+1:char*:"abc":hex:"8eb208f7e05d987a9b044a8e98c6b087f15a0bfc"
+
+mbedtls_ripemd160 Test vector from paper #4
+1:char*:"message digest":hex:"5d0689ef49d2fae572b881b123a85ffa21595f36"
+
+mbedtls_ripemd160 Test vector from paper #5
+1:char*:"abcdefghijklmnopqrstuvwxyz":hex:"f71c27109c692c1b56bbdceb5b9d2865b3708dbc"
+
+mbedtls_ripemd160 Test vector from paper #6
+1:char*:"abcdbcdecdefdefgefghfghighijhijkijkljklmklmnlmnomnopnopq":hex:"12a053384a9c0c88e405a06c27dcf49ada62eb2b"
+
+mbedtls_ripemd160 Test vector from paper #7
+1:char*:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789":hex:"b0e20b6e3116640286ed3a87a5713079b21f5189"
+
+mbedtls_ripemd160 Test vector from paper #8
+1:char*:"12345678901234567890123456789012345678901234567890123456789012345678901234567890":hex:"9b752e45573d4b39f4dbd3323cab82bf63326bfb"
+
+MD5 Selftest
+2
+
+RIPEMD160 Selftest
+3
+

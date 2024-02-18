@@ -1,0 +1,333 @@
+MPI core random basic: 0..1
+0:int:0:char*:"01":int:0
+
+MPI core random basic: 0..2
+0:int:0:char*:"02":int:0
+
+MPI core random basic: 1..2
+0:int:1:char*:"02":int:0
+
+MPI core random basic: 2^30..2^31
+0:int:0x40000000:char*:"80000000":int:0
+
+MPI core random basic: 0..2^128
+0:int:0x40000000:char*:"0100000000000000000000000000000000":int:0
+
+MPI core random basic: 2^30..2^129
+0:int:0x40000000:char*:"0200000000000000000000000000000000":int:0
+
+MPI core random basic: 2^28-1..2^28+1 (NOT_ACCEPTABLE)
+0:int:0x0fffffff:char*:"10000001":exp:0
+
+MPI random legacy=core: 2^28-1..2^28+1 (NOT_ACCEPTABLE)
+1:int:0x0fffffff:char*:"10000001"
+
+MPI random mod=core: 2^28-1..2^28+1 (NOT_ACCEPTABLE) (Mont)
+2:int:0x0fffffff:char*:"10000001":exp:1
+
+MPI random mod=core: 2^28-1..2^28+1 (NOT_ACCEPTABLE) (canon)
+2:int:0x0fffffff:char*:"10000001":exp:2
+
+MPI core random basic: 2^29-1..2^29+1 (NOT_ACCEPTABLE)
+0:int:0x1fffffff:char*:"20000001":exp:0
+
+MPI random legacy=core: 2^29-1..2^29+1 (NOT_ACCEPTABLE)
+1:int:0x1fffffff:char*:"20000001"
+
+MPI random mod=core: 2^29-1..2^29+1 (NOT_ACCEPTABLE) (Mont)
+2:int:0x1fffffff:char*:"20000001":exp:1
+
+MPI random mod=core: 2^29-1..2^29+1 (NOT_ACCEPTABLE) (canon)
+2:int:0x1fffffff:char*:"20000001":exp:2
+
+MPI core random basic: 2^30-1..2^30+1 (NOT_ACCEPTABLE)
+0:int:0x3fffffff:char*:"40000001":exp:0
+
+MPI random legacy=core: 2^30-1..2^30+1 (NOT_ACCEPTABLE)
+1:int:0x3fffffff:char*:"40000001"
+
+MPI random mod=core: 2^30-1..2^30+1 (NOT_ACCEPTABLE) (Mont)
+2:int:0x3fffffff:char*:"40000001":exp:1
+
+MPI random mod=core: 2^30-1..2^30+1 (NOT_ACCEPTABLE) (canon)
+2:int:0x3fffffff:char*:"40000001":exp:2
+
+MPI core random basic: 2^31-1..2^31+1 (NOT_ACCEPTABLE)
+0:int:0x7fffffff:char*:"80000001":exp:0
+
+MPI random legacy=core: 2^31-1..2^31+1 (NOT_ACCEPTABLE)
+1:int:0x7fffffff:char*:"80000001"
+
+MPI random mod=core: 2^31-1..2^31+1 (NOT_ACCEPTABLE) (Mont)
+2:int:0x7fffffff:char*:"80000001":exp:1
+
+MPI random mod=core: 2^31-1..2^31+1 (NOT_ACCEPTABLE) (canon)
+2:int:0x7fffffff:char*:"80000001":exp:2
+
+MPI random in range: 1..2
+3:int:1:char*:"02":int:1000
+
+MPI random in range: 1..3
+3:int:1:char*:"03":int:1000
+
+MPI random in range: 1..4
+3:int:1:char*:"04":int:1000
+
+MPI random in range: 1..5
+3:int:1:char*:"05":int:1000
+
+MPI random in range: 1..6
+3:int:1:char*:"06":int:1000
+
+MPI random in range: 1..7
+3:int:1:char*:"07":int:1000
+
+MPI random in range: 1..8
+3:int:1:char*:"08":int:1000
+
+MPI random in range: 1..9
+3:int:1:char*:"09":int:1000
+
+MPI random in range: 1..10
+3:int:1:char*:"0a":int:1000
+
+MPI random in range: 1..11
+3:int:1:char*:"0b":int:1000
+
+MPI random in range: 1..12
+3:int:1:char*:"0c":int:1000
+
+MPI random in range: 1..255
+3:int:1:char*:"ff":int:200
+
+MPI random in range: 1..256
+3:int:1:char*:"0100":int:200
+
+MPI random in range: 1..257
+3:int:1:char*:"0101":int:200
+
+MPI random in range: 1..272
+3:int:1:char*:"0110":int:200
+
+MPI random in range: 1..2^64-1
+3:int:1:char*:"ffffffffffffffff":int:100
+
+MPI random in range: 1..2^64
+3:int:1:char*:"010000000000000000":int:100
+
+MPI random in range: 1..2^64+1
+3:int:1:char*:"010000000000000001":int:100
+
+MPI random in range: 1..2^64+2^63
+3:int:1:char*:"018000000000000000":int:100
+
+MPI random in range: 1..2^65-1
+3:int:1:char*:"01ffffffffffffffff":int:100
+
+MPI random in range: 1..2^65
+3:int:1:char*:"020000000000000000":int:100
+
+MPI random in range: 1..2^65+1
+3:int:1:char*:"020000000000000001":int:100
+
+MPI random in range: 1..2^65+2^64
+3:int:1:char*:"030000000000000000":int:100
+
+MPI random in range: 1..2^66+2^65
+3:int:1:char*:"060000000000000000":int:100
+
+MPI random in range: 1..2^71-1
+3:int:1:char*:"7fffffffffffffffff":int:100
+
+MPI random in range: 1..2^71
+3:int:1:char*:"800000000000000000":int:100
+
+MPI random in range: 1..2^71+1
+3:int:1:char*:"800000000000000001":int:100
+
+MPI random in range: 1..2^71+2^70
+3:int:1:char*:"c00000000000000000":int:100
+
+MPI random in range: 1..2^72-1
+3:int:1:char*:"ffffffffffffffffff":int:100
+
+MPI random in range: 1..2^72
+3:int:1:char*:"01000000000000000000":int:100
+
+MPI random in range: 1..2^72+1
+3:int:1:char*:"01000000000000000001":int:100
+
+MPI random in range: 1..2^72+2^71
+3:int:1:char*:"01800000000000000000":int:100
+
+MPI random in range: 0..1
+3:int:0:char*:"04":int:10000
+
+MPI random in range: 0..4
+3:int:0:char*:"04":int:10000
+
+MPI random in range: 2..4
+3:int:2:char*:"04":int:10000
+
+MPI random in range: 3..4
+3:int:3:char*:"04":int:10000
+
+MPI random in range: smaller result
+4:int:1:hex:"aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbb":int:1:int:0
+
+MPI random in range: same size result (32-bit limbs)
+4:int:1:hex:"aaaaaaaaaaaaaaaa":int:2:int:0
+
+MPI random in range: same size result (64-bit limbs)
+4:int:1:hex:"aaaaaaaaaaaaaaaa":int:1:int:0
+
+MPI random in range: larger result
+4:int:1:hex:"aaaaaaaaaaaaaaaa":int:3:int:0
+
+MPI random in range: leading 0 limb in upper bound #0
+4:int:1:hex:"00aaaaaaaaaaaaaaaa":int:0:int:0
+
+MPI random in range: leading 0 limb in upper bound #1
+4:int:1:hex:"00aaaaaaaaaaaaaaaa":int:1:int:0
+
+MPI random in range: leading 0 limb in upper bound #2
+4:int:1:hex:"00aaaaaaaaaaaaaaaa":int:2:int:0
+
+MPI random in range: leading 0 limb in upper bound #3
+4:int:1:hex:"00aaaaaaaaaaaaaaaa":int:3:int:0
+
+MPI random in range: leading 0 limb in upper bound #4
+4:int:1:hex:"00aaaaaaaaaaaaaaaa":int:4:int:0
+
+MPI random in range: previously small >0
+4:int:1:hex:"1234567890":int:4:int:1
+
+MPI random in range: previously small <0
+4:int:1:hex:"1234567890":int:4:int:-1
+
+MPI random in range: previously large >0
+4:int:1:hex:"1234":int:4:int:65
+
+MPI random in range: previously large <0
+4:int:1:hex:"1234":int:4:int:-65
+
+MPI random bad arguments: min < 0
+6:int:-1:hex:"04":exp:3
+
+MPI random bad arguments: min = N = 0
+6:int:0:hex:"00":exp:3
+
+MPI random bad arguments: min = N = 1
+6:int:1:hex:"01":exp:3
+
+MPI random bad arguments: min > N = 0
+6:int:1:hex:"00":exp:3
+
+MPI random bad arguments: min > N = 1
+6:int:2:hex:"01":exp:3
+
+MPI random bad arguments: min > N = 1, 0 limb in upper bound
+6:int:2:hex:"000000000000000001":exp:3
+
+MPI random legacy=core: 0..1
+1:int:0:char*:"01"
+
+MPI random legacy=core: 0..2
+1:int:0:char*:"02"
+
+MPI random legacy=core: 1..2
+1:int:1:char*:"02"
+
+MPI random legacy=core: 2^30..2^31
+1:int:0x40000000:char*:"80000000"
+
+MPI random legacy=core: 2^31-1..2^32-1
+1:int:0x7fffffff:char*:"ffffffff"
+
+MPI random legacy=core: 0..2^256
+1:int:0:char*:"010000000000000000000000000000000000000000000000000000000000000000"
+
+MPI random legacy=core: 0..2^256+1
+1:int:0:char*:"010000000000000000000000000000000000000000000000000000000000000001"
+
+MPI random mod=core: 0..1 (Mont)
+2:int:0:char*:"01":exp:1
+
+MPI random mod=core: 0..1 (canon)
+2:int:0:char*:"01":exp:2
+
+MPI random mod=core: 0..3 (Mont)
+2:int:0:char*:"03":exp:1
+
+MPI random mod=core: 0..3 (canon)
+2:int:0:char*:"03":exp:2
+
+MPI random mod=core: 1..3 (Mont)
+2:int:1:char*:"03":exp:1
+
+MPI random mod=core: 1..3 (canon)
+2:int:1:char*:"03":exp:2
+
+MPI random mod=core: 2^30..2^31-1 (Mont)
+2:int:0x40000000:char*:"7fffffff":exp:1
+
+MPI random mod=core: 2^30..2^31-1 (canon)
+2:int:0x40000000:char*:"7fffffff":exp:2
+
+MPI random mod=core: 2^31-1..2^32-1 (Mont)
+2:int:0x7fffffff:char*:"ffffffff":exp:1
+
+MPI random mod=core: 2^31-1..2^32-1 (canon)
+2:int:0x7fffffff:char*:"ffffffff":exp:2
+
+MPI random mod=core: 0..2^256+1 (Mont)
+2:int:0:char*:"010000000000000000000000000000000000000000000000000000000000000001":exp:1
+
+MPI random mod=core: 0..2^256+1 (canon)
+2:int:0:char*:"010000000000000000000000000000000000000000000000000000000000000001":exp:2
+
+MPI random mod validation: 1 limb, good, 0..1
+5:int:0:char*:"1":int:0:int:0
+
+MPI random mod validation: 1 limb, good, 1..3
+5:int:1:char*:"3":int:0:int:0
+
+MPI random mod validation: 1 limb, good, 2..3
+5:int:2:char*:"3":int:0:int:0
+
+MPI random mod validation: 1 limb, good, 3..5
+5:int:3:char*:"5":int:0:int:0
+
+MPI random mod validation: 1 limb, good, 4..5
+5:int:4:char*:"5":int:0:int:0
+
+MPI random mod validation: 1 limb, good, 5..7
+5:int:5:char*:"7":int:0:int:0
+
+MPI random mod validation: 1 limb, good, 6..7
+5:int:6:char*:"7":int:0:int:0
+
+MPI random mod validation: 1 limb, good, 0..0x123
+5:int:0:char*:"123":int:0:int:0
+
+MPI random mod validation: 2+ limbs, good
+5:int:0:char*:"01234567890123456789":int:0:int:0
+
+MPI random mod validation: 1 limb, output null
+5:int:0:char*:"123":int:-1:exp:3
+
+MPI random mod validation: 1 limb, output too large
+5:int:0:char*:"123":int:1:exp:3
+
+MPI random mod validation: 2+ limbs, output too small
+5:int:0:char*:"01234567890123456789":int:-1:exp:3
+
+MPI random mod validation: 2+ limbs, output too large
+5:int:0:char*:"01234567890123456789":int:1:exp:3
+
+MPI random mod validation: min == upper bound
+5:int:0x123:char*:"123":int:-1:exp:3
+
+MPI random mod validation: min > upper bound
+5:int:0x124:char*:"123":int:-1:exp:3
+

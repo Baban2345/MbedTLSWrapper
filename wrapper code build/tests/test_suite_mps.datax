@@ -1,0 +1,126 @@
+MPS Reader: Single step, single round, pausing disabled
+0:int:0
+
+MPS Reader: Single step, single round, pausing enabled but unused
+0:int:1
+
+MPS Reader: Single step, multiple rounds, pausing disabled
+1:int:0
+
+MPS Reader: Single step, multiple rounds, pausing enabled but unused
+1:int:1
+
+MPS Reader: Multiple steps, single round, pausing disabled
+2:int:0
+
+MPS Reader: Multiple steps, single round, pausing enabled but unused
+2:int:1
+
+MPS Reader: Multiple steps, multiple rounds, pausing disabled
+3:int:0
+
+MPS Reader: Multiple steps, multiple rounds, pausing enabled but unused
+3:int:1
+
+MPS Reader: Pausing needed but disabled
+4
+
+MPS Reader: Pausing needed + enabled, but buffer too small
+5
+
+MPS Reader: Pausing, repeat single call without commit
+7:int:0
+
+MPS Reader: Pausing, repeat single call with commit
+7:int:1
+
+MPS Reader: Pausing, repeat multiple calls without commit
+7:int:2
+
+MPS Reader: Pausing, repeat multiple calls with commit #0
+7:int:3
+
+MPS Reader: Pausing, repeat multiple calls with commit #1
+7:int:4
+
+MPS Reader: Pausing, repeat multiple calls with commit #2
+7:int:5
+
+MPS Reader: Pausing, feed 50 bytes in 10b + 10b + 80b
+8:int:0
+
+MPS Reader: Pausing, feed 50 bytes in 50x1b
+8:int:1
+
+MPS Reader: Pausing, feed 50 bytes in 49x1b + 51b
+8:int:2
+
+MPS Reader: Reclaim with data remaining #0
+9:int:0
+
+MPS Reader: Reclaim with data remaining #1
+9:int:1
+
+MPS Reader: Reclaim with data remaining #2
+9:int:2
+
+MPS Reader: Reclaim with data remaining, continue fetching
+10
+
+MPS Reader: Pausing several times, #0
+11:int:0
+
+MPS Reader: Pausing several times, #1
+11:int:1
+
+MPS Reader: Pausing several times, #2
+11:int:2
+
+MPS Reader: Pausing several times, #3
+11:int:3
+
+MPS Reader: Random usage, 20 rds, feed 100, get 200, acc 50
+12:int:20:int:100:int:200:int:50
+
+MPS Reader: Random usage, 1000 rds, feed 10, get 100, acc 80
+12:int:1000:int:10:int:100:int:80
+
+MPS Reader: Random usage, 10000 rds, feed 1, get 100, acc 80
+12:int:10000:int:1:int:100:int:80
+
+MPS Reader: Random usage, 100 rds, feed 100, get 1000, acc 500
+12:int:100:int:100:int:1000:int:500
+
+MPS Reader: Pausing, inconsistent continuation, #0
+13:int:0
+
+MPS Reader: Pausing, inconsistent continuation, #1
+13:int:1
+
+MPS Reader: Pausing, inconsistent continuation, #2
+13:int:2
+
+MPS Reader: Pausing, inconsistent continuation, #3
+13:int:3
+
+MPS Reader: Pausing, inconsistent continuation, #4
+13:int:4
+
+MPS Reader: Pausing, inconsistent continuation, #5
+13:int:5
+
+MPS Reader: Pausing, inconsistent continuation, #6
+13:int:6
+
+MPS Reader: Pausing, inconsistent continuation, #7
+13:int:7
+
+MPS Reader: Pausing, inconsistent continuation, #8
+13:int:8
+
+MPS Reader: Feed with invalid buffer (NULL)
+14
+
+MPS Reader: Excess request leading to integer overflow
+6
+

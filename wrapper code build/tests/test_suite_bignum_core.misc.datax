@@ -1,0 +1,526 @@
+Test mbedtls_mpi_core_io functions with null pointers
+0
+
+Test mbedtls_mpi_core_io_be #1 (Buffer and limbs just fit, input limb-aligned)
+1:hex:"0941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b4424":int:96:int:24:int:0:int:0
+
+Test mbedtls_mpi_core_io_be #2  (Buffer and limbs just fit, input unaligned)
+1:hex:"0941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b":int:94:int:24:int:0:int:0
+
+Test mbedtls_mpi_core_io_be #3 (Buffer just fits, extra limbs, input limb-aligned)
+1:hex:"0941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b4424":int:96:int:28:int:0:int:0
+
+Test mbedtls_mpi_core_io_be #4 (Buffer just fits, extra limbs, input unaligned)
+1:hex:"0941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b":int:94:int:28:int:0:int:0
+
+Test mbedtls_mpi_core_io_be #5 (Extra limbs, buffer aligned to extra limbs, input limb-aligned)
+1:hex:"0941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b4424":int:112:int:28:int:0:int:0
+
+Test mbedtls_mpi_core_io_be #6 (Extra limbs, buffer aligned to extra limbs, input unaligned)
+1:hex:"0941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b":int:112:int:28:int:0:int:0
+
+Test mbedtls_mpi_core_io_be #7 (Buffer and limbs just fit, input limb-aligned with leading zeroes)
+1:hex:"00000000000000001fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b4424":int:88:int:24:int:0:int:0
+
+Test mbedtls_mpi_core_io_be #8 (Buffer and limbs just fit, input unaligned with leading zeroes)
+1:hex:"00000000000000001fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b":int:86:int:24:int:0:int:0
+
+Test mbedtls_mpi_core_io_be #9 (Buffer just fits, extra limbs, input limb-aligned with leading zeroes)
+1:hex:"00000000000000001fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b4424":int:88:int:28:int:0:int:0
+
+Test mbedtls_mpi_core_io_be #10 (Buffer just fits, extra limbs, input unaligned with leading zeroes)
+1:hex:"00000000000000001fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b":int:86:int:28:int:0:int:0
+
+Test mbedtls_mpi_core_io_be #11 (Zero)
+1:hex:"00":int:1:int:1:int:0:int:0
+
+Test mbedtls_mpi_core_io_be #12 (Zero, empty output)
+1:hex:"00":int:0:int:1:int:0:int:0
+
+Test mbedtls_mpi_core_io_be #13 (Zero, empty input)
+1:hex:"":int:1:int:1:int:0:int:0
+
+Test mbedtls_mpi_core_io_be #14 (One)
+1:hex:"01":int:1:int:1:int:0:int:0
+
+Test mbedtls_mpi_core_io_be #15 (One limb, 32 bit)
+depends_on:0
+1:hex:"ff000000":int:4:int:1:int:0:int:0
+
+Test mbedtls_mpi_core_io_be #16 (One limb, 64 bit)
+depends_on:1
+1:hex:"ff00000000000000":int:8:int:2:int:0:int:0
+
+Test mbedtls_mpi_core_io_be #17 (not enough limbs, input limb-aligned)
+1:hex:"0941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b4424":int:96:int:22:exp:0:int:0
+
+Test mbedtls_mpi_core_io_be #18 (not enough limbs, input unaligned)
+1:hex:"0941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b":int:94:int:22:exp:0:int:0
+
+Test mbedtls_mpi_core_io_be #19 (buffer too small, input limb-aligned)
+1:hex:"0941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b4424":int:95:int:24:int:0:exp:0
+
+Test mbedtls_mpi_core_io_be #20 (buffer too small, input unaligned)
+1:hex:"0941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b":int:93:int:24:int:0:exp:0
+
+Test mbedtls_mpi_core_io_be #21 (Buffer and limbs fit, input unaligned, odd number of limbs)
+1:hex:"00de4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b4424":int:82:int:21:int:0:int:0
+
+Test mbedtls_mpi_core_io_le #1 (Buffer and limbs just fit, input limb-aligned)
+2:hex:"0941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b4424":int:96:int:24:int:0:int:0
+
+Test mbedtls_mpi_core_io_le #2  (Buffer and limbs just fit, input unaligned)
+2:hex:"0941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b":int:94:int:24:int:0:int:0
+
+Test mbedtls_mpi_core_io_le #3 (Buffer just fits, extra limbs, input limb-aligned)
+2:hex:"0941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b4424":int:96:int:28:int:0:int:0
+
+Test mbedtls_mpi_core_io_le #4 (Buffer just fits, extra limbs, input unaligned)
+2:hex:"0941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b":int:94:int:28:int:0:int:0
+
+Test mbedtls_mpi_core_io_le #5 (Extra limbs, buffer aligned to extra limbs, input limb-aligned)
+2:hex:"0941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b4424":int:112:int:28:int:0:int:0
+
+Test mbedtls_mpi_core_io_le #6 (Extra limbs, buffer aligned to extra limbs, input unaligned)
+2:hex:"0941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b":int:112:int:28:int:0:int:0
+
+Test mbedtls_mpi_core_io_le #7 (Buffer and limbs just fit, input limb-aligned with leading zeroes)
+2:hex:"1fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b44240000000000000000":int:88:int:24:int:0:int:0
+
+Test mbedtls_mpi_core_io_le #8 (Buffer and limbs just fit, input unaligned with leading zeroes)
+2:hex:"1fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b0000000000000000":int:86:int:24:int:0:int:0
+
+Test mbedtls_mpi_core_io_le #9 (Buffer just fits, extra limbs, input limb-aligned with leading zeroes)
+2:hex:"1fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b44240000000000000000":int:88:int:28:int:0:int:0
+
+Test mbedtls_mpi_core_io_le #10 (Buffer just fits, extra limbs, input unaligned with leading zeroes)
+2:hex:"1fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b0000000000000000":int:86:int:28:int:0:int:0
+
+Test mbedtls_mpi_core_io_le #11 (Zero)
+2:hex:"00":int:1:int:1:int:0:int:0
+
+Test mbedtls_mpi_core_io_le #12 (Zero, empty output)
+2:hex:"00":int:0:int:1:int:0:int:0
+
+Test mbedtls_mpi_core_io_le #13 (Zero, empty input)
+2:hex:"":int:1:int:1:int:0:int:0
+
+Test mbedtls_mpi_core_io_le #14 (One)
+2:hex:"01":int:1:int:1:int:0:int:0
+
+Test mbedtls_mpi_core_io_le #15 (One limb)
+depends_on:0
+2:hex:"000000ff":int:4:int:1:int:0:int:0
+
+Test mbedtls_mpi_core_io_le #16 (One limb)
+depends_on:1
+2:hex:"00000000000000ff":int:8:int:2:int:0:int:0
+
+Test mbedtls_mpi_core_io_le #17 (not enough limbs, input limb-aligned)
+2:hex:"0941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b4424":int:96:int:22:exp:0:int:0
+
+Test mbedtls_mpi_core_io_le #18 (not enough limbs, input unaligned)
+2:hex:"0941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b":int:94:int:22:exp:0:int:0
+
+Test mbedtls_mpi_core_io_le #19 (buffer too small, input limb-aligned)
+2:hex:"0941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b4424":int:95:int:24:int:0:exp:0
+
+Test mbedtls_mpi_core_io_le #20 (buffer too small, input unaligned)
+2:hex:"0941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b":int:93:int:24:int:0:exp:0
+
+Test mbedtls_mpi_core_io_le #21 (Buffer and limbs fit, input unaligned, odd number of limbs)
+2:hex:"de4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b442400":int:82:int:21:int:0:int:0
+
+Test mbedtls_mpi_core_bitlen 764-bit
+3:char*:"941379d00fed1491fe15df284dfde4a142f68aa8d412023195cee66883e6290ffe703f4ea5963bf212713cee46b107c09182b5edcd955adac418bf4918e2889af48e1099d513830cec85c26ac1e158b52620e33ba8692f893efbb2f958b4424":int:764
+
+Test mbedtls_mpi_core_bitlen 0x18
+3:char*:"18":int:5
+
+Test mbedtls_mpi_core_bitlen 0x18 with leading 0 limb(s)
+3:char*:"00000000000000018":int:5
+
+Test mbedtls_mpi_core_bitlen 0x18 << 64
+3:char*:"180000000000000000":int:69
+
+Test mbedtls_mpi_core_bitlen 0x01
+3:char*:"1":int:1
+
+Test mbedtls_mpi_core_bitlen 0x0f
+3:char*:"f":int:4
+
+Test mbedtls_mpi_core_bitlen 0x10
+3:char*:"10":int:5
+
+Test mbedtls_mpi_core_bitlen 0x0a
+3:char*:"a":int:4
+
+Test mbedtls_mpi_core_bitlen: 0 (1 limb)
+3:char*:"0":int:0
+
+mbedtls_mpi_core_lt_ct: x=y (1 limb)
+5:char*:"2B5":char*:"2B5":int:0
+
+mbedtls_mpi_core_lt_ct: x>y (1 limb)
+5:char*:"2B5":char*:"2B4":int:0
+
+mbedtls_mpi_core_lt_ct: x<y (1 limb)
+5:char*:"2B5":char*:"2B6":int:1
+
+mbedtls_mpi_core_lt_ct: x>y (63 bit x, y first byte greater)
+5:char*:"7FFFFFFFFFFFFFFF":char*:"00000000000000FF":int:0
+
+mbedtls_mpi_core_lt_ct: x<y (63 bit y, x first byte greater)
+5:char*:"00000000000000FF":char*:"7FFFFFFFFFFFFFFF":int:1
+
+mbedtls_mpi_core_lt_ct: x>y (64 bit x, y=x-1)
+5:char*:"8000000000000000":char*:"7FFFFFFFFFFFFFFF":int:0
+
+mbedtls_mpi_core_lt_ct: x<y (64 bit y, x=y-1)
+5:char*:"7FFFFFFFFFFFFFFF":char*:"8000000000000000":int:1
+
+mbedtls_mpi_core_lt_ct: x>y (64 bit x, y=1)
+5:char*:"8000000000000000":char*:"0000000000000001":int:0
+
+mbedtls_mpi_core_lt_ct: x<y (64 bit y, x=1)
+5:char*:"0000000000000001":char*:"8000000000000000":int:1
+
+mbedtls_mpi_core_lt_ct: x>y (64 bit x, y=0)
+5:char*:"8000000000000000":char*:"0000000000000000":int:0
+
+mbedtls_mpi_core_lt_ct: x<y (64 bit y, x=0)
+5:char*:"0000000000000000":char*:"8000000000000000":int:1
+
+mbedtls_mpi_core_lt_ct: x>y (64 bit x, first bytes equal)
+5:char*:"FFFFFFFFFFFFFFFF":char*:"00000000000000FF":int:0
+
+mbedtls_mpi_core_lt_ct: x<y (64 bit y, first bytes equal)
+5:char*:"00000000000000FF":char*:"FFFFFFFFFFFFFFFF":int:1
+
+mbedtls_mpi_core_lt_ct: x>y (31 bit x, y first byte greater)
+5:char*:"7FFFFFFF":char*:"000000FF":int:0
+
+mbedtls_mpi_core_lt_ct: x<y (31 bit y, x first byte greater)
+5:char*:"000000FF":char*:"7FFFFFFF":int:1
+
+mbedtls_mpi_core_lt_ct: x>y (32 bit x, y=x-1)
+5:char*:"80000000":char*:"7FFFFFFF":int:0
+
+mbedtls_mpi_core_lt_ct: x<y (32 bit y, x=y-1)
+5:char*:"7FFFFFFF":char*:"80000000":int:1
+
+mbedtls_mpi_core_lt_ct: x>y (32 bit x, y=1)
+5:char*:"80000000":char*:"00000001":int:0
+
+mbedtls_mpi_core_lt_ct: x<y (32 bit y, x=1)
+5:char*:"00000001":char*:"80000000":int:1
+
+mbedtls_mpi_core_lt_ct: x>y (32 bit x, y=0)
+5:char*:"80000000":char*:"00000000":int:0
+
+mbedtls_mpi_core_lt_ct: x<y (32 bit y, x=0)
+5:char*:"00000000":char*:"80000000":int:1
+
+mbedtls_mpi_core_lt_ct: x>y (32 bit x, first bytes equal)
+5:char*:"FFFFFFFF":char*:"000000FF":int:0
+
+mbedtls_mpi_core_lt_ct: x<y (32 bit y, first bytes equal)
+5:char*:"000000FF":char*:"FFFFFFFF":int:1
+
+mbedtls_mpi_core_lt_ct: x<y, zero vs non-zero MS limb
+5:char*:"0FFFFFFFFFFFFFFFF":char*:"1FFFFFFFFFFFFFFFF":int:1
+
+mbedtls_mpi_core_lt_ct: x>y, equal MS limbs
+5:char*:"EEFFFFFFFFFFFFFFFF":char*:"EEFFFFFFFFFFFFFFF1":int:0
+
+mbedtls_mpi_core_lt_ct: x=y (multi-limb)
+5:char*:"EEFFFFFFFFFFFFFFFF":char*:"EEFFFFFFFFFFFFFFFF":int:0
+
+mbedtls_mpi_core_lt_ct: x<y (alternating limbs)
+5:char*:"11FFFFFFFFFFFFFFFF":char*:"FF1111111111111111":int:1
+
+mbedtls_mpi_core_lt_ct: x>y (alternating limbs)
+5:char*:"FF1111111111111111":char*:"11FFFFFFFFFFFFFFFF":int:0
+
+Test mbedtls_mpi_core_uint_le_mpi: 0 (1 limb)
+6:char*:"00"
+
+Test mbedtls_mpi_core_uint_le_mpi: 0 (>=2 limbs)
+6:char*:"000000000000000000"
+
+Test mbedtls_mpi_core_uint_le_mpi: 1 (1 limb)
+6:char*:"01"
+
+Test mbedtls_mpi_core_uint_le_mpi: 1 (>=2 limbs)
+6:char*:"000000000000000001"
+
+Test mbedtls_mpi_core_uint_le_mpi: 42 (1 limb)
+6:char*:"2a"
+
+Test mbedtls_mpi_core_uint_le_mpi: 42 (>=2 limbs)
+6:char*:"000000000000000042"
+
+Test mbedtls_mpi_core_uint_le_mpi: 2^31-1
+6:char*:"7fffffff"
+
+Test mbedtls_mpi_core_uint_le_mpi: 2^31-1 with leading zero limb
+6:char*:"00000000007fffffff"
+
+Test mbedtls_mpi_core_uint_le_mpi: 2^32-1
+6:char*:"ffffffff"
+
+Test mbedtls_mpi_core_uint_le_mpi: 2^32-1 with leading zero limb
+6:char*:"0000000000ffffffff"
+
+Test mbedtls_mpi_core_uint_le_mpi: 2^32
+6:char*:"10000000"
+
+Test mbedtls_mpi_core_uint_le_mpi: 2^32 with leading zero limb
+6:char*:"000000000010000000"
+
+Test mbedtls_mpi_core_uint_le_mpi: 2^32+1
+6:char*:"10000001"
+
+Test mbedtls_mpi_core_uint_le_mpi: 2^32+1 with leading zero limb
+6:char*:"000000000010000001"
+
+Test mbedtls_mpi_core_uint_le_mpi: 2^63-1
+6:char*:"7fffffffffffffff"
+
+Test mbedtls_mpi_core_uint_le_mpi: 2^63-1 with leading zero limb
+6:char*:"007fffffffffffffff"
+
+Test mbedtls_mpi_core_uint_le_mpi: 2^64-1
+6:char*:"ffffffffffffffff"
+
+Test mbedtls_mpi_core_uint_le_mpi: 2^64-1 with leading zero limb
+6:char*:"00ffffffffffffffff"
+
+Test mbedtls_mpi_core_uint_le_mpi: 2^64
+6:char*:"010000000000000000"
+
+Test mbedtls_mpi_core_uint_le_mpi: 2^64+1
+6:char*:"010000000000000001"
+
+Test mbedtls_mpi_core_uint_le_mpi: 2^64+2
+6:char*:"010000000000000002"
+
+mbedtls_mpi_core_cond_assign: 1 limb
+7:char*:"FFFFFFFF":char*:"11111111":int:4
+
+mbedtls_mpi_core_cond_assign: more limbs #1
+7:char*:"00000000FFFFFFFF55555555AAAAAAAA":char*:"0123456789ABCDEF0123456789ABCDEF":int:16
+
+mbedtls_mpi_core_cond_assign: more limbs #2
+7:char*:"11111111EEEEEEEE77777777CCCCCCCC":char*:"FEDCBA9876543210FEDCBA9876543210":int:16
+
+mbedtls_mpi_core_cond_assign: more limbs #3
+7:char*:"562D2B7E83BDC6FF783CEC0D6F46EAE7":char*:"4C314E3B5CEB009C25F3300D5ECF670A":int:16
+
+mbedtls_mpi_core_cond_assign: copy 256 bytes of limbs
+7:char*:"00000000111111112222222233333333444444445555555566666666777777778888888899999999AAAAAAAABBBBBBBBCCCCCCCCDDDDDDDDEEEEEEEEFFFFFFFF00000000111111112222222233333333444444445555555566666666777777778888888899999999AAAAAAAABBBBBBBBCCCCCCCCDDDDDDDDEEEEEEEEFFFFFFFF00000000111111112222222233333333444444445555555566666666777777778888888899999999AAAAAAAABBBBBBBBCCCCCCCCDDDDDDDDEEEEEEEEFFFFFFFF00000000111111112222222233333333444444445555555566666666777777778888888899999999AAAAAAAABBBBBBBBCCCCCCCCDDDDDDDDEEEEEEEEFFFFFFFF":char*:"6E3173EEAC8D68A5AB53D259F32D9E9C298FD2C4FAD3BEE9151DC103EA2382F5480C7D11F451C060A1E3D887E05A620EF6395763CB7A40FC473DD0771456A018E18635EA971C36DCAD09D60E8BD0E2E0CCD1AECB8BE0ABA881DBE60163F6C45947EC0B05FDAAA3DF944627DD4FACBAD3FF2AB4B99D91E548C06A4AF320A9CA0D2FD0CB19B90B9D6A8BF59CB631DD925B6DEA621FE962099D3D0BED6B13C0C546DC6B563A7FC63B1B77D277897DD7B9DF28C4C9213A183B83D982964C6AD8192CE7354B11ED727EDEF85074C46E4E2E6C1728FB7980385CDB36512F927847C6A14A118624ABC12B09DBEE60D651B5431AAD982228C61655EABB80C263871AE1CF":int:256
+
+mbedtls_mpi_core_cond_assign: copy half of the limbs
+7:char*:"00000000FFFFFFFF55555555AAAAAAAA":char*:"FEDCBA9876543210FEDCBA9876543210":int:8
+
+mbedtls_mpi_core_cond_swap: same value
+8:char*:"FFFFFFFF":char*:"FFFFFFFF":int:4
+
+mbedtls_mpi_core_cond_swap: 1 limb
+8:char*:"FFFFFFFF":char*:"11111111":int:4
+
+mbedtls_mpi_core_cond_swap: more limbs #1
+8:char*:"00000000FFFFFFFF55555555AAAAAAAA":char*:"0123456789ABCDEF0123456789ABCDEF":int:16
+
+mbedtls_mpi_core_cond_swap: more limbs #2
+8:char*:"11111111EEEEEEEE77777777CCCCCCCC":char*:"FEDCBA9876543210FEDCBA9876543210":int:16
+
+mbedtls_mpi_core_cond_swap: more limbs #3
+8:char*:"562D2B7E83BDC6FF783CEC0D6F46EAE7":char*:"4C314E3B5CEB009C25F3300D5ECF670A":int:16
+
+mbedtls_mpi_core_cond_swap: copy 256 bytes of limbs
+8:char*:"00000000111111112222222233333333444444445555555566666666777777778888888899999999AAAAAAAABBBBBBBBCCCCCCCCDDDDDDDDEEEEEEEEFFFFFFFF00000000111111112222222233333333444444445555555566666666777777778888888899999999AAAAAAAABBBBBBBBCCCCCCCCDDDDDDDDEEEEEEEEFFFFFFFF00000000111111112222222233333333444444445555555566666666777777778888888899999999AAAAAAAABBBBBBBBCCCCCCCCDDDDDDDDEEEEEEEEFFFFFFFF00000000111111112222222233333333444444445555555566666666777777778888888899999999AAAAAAAABBBBBBBBCCCCCCCCDDDDDDDDEEEEEEEEFFFFFFFF":char*:"9FBBA284460D8EAB5E0D66B634BD18FBA58C0C25417DD637526A7622C6425B46E09AEFBB8C2340AC823DFE990A62C85DB23BCDBEA734134606CEEB4BCF7444569D5EC4E32341ED09D7A5D0BB8B11D7B726BAECCF37D4FC1BEBD892CADD7BE9E093343C1A68D7A188DFE145C1EDBD8048B24E20A076F981D75ABE44318ADC40ED316C444774B6A90D3EE49557315AA6FAB162A498C0B2E2C15BD94186A665E12DDC39211583FA5F21218A3B46999FEBA4DFF454FB6ED35B8F3AE5F8EA840838BD76006DA112F85EDAA2CC07518FFC9724D5695BAF74F16C8D1A3A06029D2F5C1023D9E8A84D1267BD9AF82D1F5F77092D34BE4E8C4D1EA8C58F90B094DCFD6920":int:256
+
+mbedtls_mpi_core_cond_swap: copy half of the limbs
+8:char*:"00000000FFFFFFFF55555555AAAAAAAA":char*:"FEDCBA9876543210FEDCBA9876543210":int:8
+
+mbedtls_mpi_montg_init #1
+14:char*:"000000000000001d":char*:"cb08d3dcb08d3dcb"
+
+mbedtls_mpi_montg_init #2
+14:char*:"0000000000000009":char*:"71c71c71c71c71c7"
+
+mbedtls_mpi_montg_init #3
+14:char*:"000000000001869f":char*:"34d76bc8e5e3eaa1"
+
+mbedtls_mpi_montg_init #4
+14:char*:"00000000000080000000000000000001":char*:"ffffffffffffffff"
+
+mbedtls_mpi_montg_init #5
+14:char*:"0000000000a1ffffffffffffffffffff":char*:"0000000000000001"
+
+mbedtls_mpi_montg_init #6
+14:char*:"00000000000257ffffffffffffffffff":char*:"0000000000000001"
+
+mbedtls_mpi_montg_init #7
+14:char*:"b91ba63180c726fbd57786f27f1ede97a3b40c59a7fcfb5898f076e9af57028d":char*:"32edc7e1ac2e6fbb"
+
+mbedtls_mpi_montg_init #8
+14:char*:"b3a119602ee213cde28581ecd892e0f592a338655dce4ca88054b3d124d0e561":char*:"e41cfb909805815f"
+
+mbedtls_mpi_montg_init #9
+14:char*:"0284139ea19c139ebe09a8111926aaa39a2c2be12ed487a809d3cb5bc55854725b4cdcb5734c58f90b2f60d99cc1950cdbc8d651793e93c9c6f0ead752500a32c56c62082912b66132b2a6aa42ada923e1ad22ceb7ba0123":char*:"c02e2164b293c975"
+
+mbedtls_mpi_montg_init #10
+14:char*:"00000000000000011a9351d2d32ccd568e75bf8b4ebbb2a36be691b55832edac662ff79803df8af525fba453068be16ac3920bcc1b468f8f7fe786e0fa4ecbabcad31e5e3b05def802eb8600deaf11ef452487db878df20a80606e4bb6a163b83895d034cc8b53dbcd005be42ffdd2ce99bed06089a0b79d":char*:"ffec8978c055794b"
+
+mbedtls_mpi_montg_init #11
+14:char*:"eeaf0ab9adb38dd69c33f80afa8fc5e86072618775ff3c0b9ea2314c9c256576d674df7496ea81d3383b4813d692c6e0e0d5d8e250b98be48e495c1d6089dad15dc7d7b46154d6b6ce8ef4ad69b15d4982559b297bcf1885c529f566660e57ec68edbc3c05726cc02fd4cbf4976eaa9afd5138fe8376435b9fc61d2fc0eb06e3":char*:"7b07a0b0379b9135"
+
+mbedtls_mpi_montg_init #12
+14:char*:"00000007a364ab3de755f924642bd5273524234f78395da1ed9098f39af4fe248288b0cb7f1c27214588969479d7dc9f0d327b5544dd4c095aa1fa271df421fe9ee460855cc8423d223e2c85dc793f6babdca7fc804ea1f408f867db053bfd98c45085ea5d805c78d2863bacdfcaf4c6147ebb74a9056045074785714c0b84ed":char*:"8f54b233c070871b"
+
+mbedtls_mpi_montg_init #13
+14:char*:"e2df85c83ee8463b3af26805791cc0b1ba1af89564e887a63d5ba18ea72fb593b664cf8ace78241ea3109b7644510e02324a5c1e9a85daada3c383759d7678ce8d8886b51a3237dc84b543de4f843c77fc77ba08ef90e7e96ba622478f6b96daa3e9b8511f36279fb0120ef93bad2090e7878346fe4ae29ad61be48b6835e8407d0849422e05c7a4d1e02322f2675056d73d4c5a1ab376bfaccfd61ff7d64b715c9525a7ed8dcda1144f8722c30d12ba3d95221d897edc825a1598a645e2c457":char*:"b777a905d9239899"
+
+mbedtls_mpi_montg_init #14
+14:char*:"baea2d65939296fc2536f18f2a4042a741f33088ecd5000e76c67a466e7a1e696f8ee9a15497168b3a2b597799dc9475909ebbc64b96f233430c6aa3e4a86e9352b0230081502da09ef41dc0a164a1c6a31bd1338e359a28c78ef50c89f06a46b46a27d7245bba7468334625687201d62ef084de4c5190dfe70c14a318204492de6edd138e14e9337fda739dcadd0212302db7770de28d8c5c79b6a6b5f927e656e157cd7e41204ec39731fe3608ecd4b885a194647fe7f02b74639cc76cdf03":char*:"827ef0810f71fc55"
+
+mbedtls_mpi_montg_init #15
+14:char*:"bf741f75e28a44e271cf43e68dbadd23c72d2f2e1fc78a6d6aaaadf2ccbf26c9a232aff5b3f3f29323b114f3018144ed9438943e07820e222137d3bb229b61671e61f75f6021a26436df9e669929fa392df021f105d2fce0717468a522018721ccde541b9a7b558128419f457ef33a5753f00c20c2d709727eef6278c55b278b10abe1d13e538514128b5dcb7bfd015e0fdcb081555071813974135d5ab5000630a94f5b0f4021a504ab4f3df2403e6140b9939f8bbe714635f5cff10744be03":char*:"aab901da57bba355"
+
+mbedtls_mpi_core_get_mont_r2_unsafe_neg
+16
+
+mbedtls_mpi_core_get_mont_r2_unsafe #1
+17:char*:"f":char*:"1":char*:"1"
+
+mbedtls_mpi_core_get_mont_r2_unsafe #2
+17:char*:"fd":char*:"ec":char*:"24"
+
+mbedtls_mpi_core_get_mont_r2_unsafe #3
+17:char*:"eeff99aa37":char*:"a23bd6a686":char*:"a23bd6a686"
+
+mbedtls_mpi_core_get_mont_r2_unsafe #4
+17:char*:"eeff99aa11":char*:"3308cb71":char*:"3308cb71"
+
+mbedtls_mpi_core_get_mont_r2_unsafe #5
+17:char*:"800000000005":char*:"6400000000":char*:"6400000000"
+
+mbedtls_mpi_core_get_mont_r2_unsafe #6
+17:char*:"7fffffffffffffff":char*:"4":char*:"4"
+
+mbedtls_mpi_core_get_mont_r2_unsafe #7
+17:char*:"80fe000a10000001":char*:"5dbc6e833bad575a":char*:"5dbc6e833bad575a"
+
+mbedtls_mpi_core_get_mont_r2_unsafe #8
+17:char*:"25a55a46e5da99c71c7":char*:"11637ce1347edeaf669":char*:"1e455bf7451c05bc711"
+
+mbedtls_mpi_core_get_mont_r2_unsafe #9
+17:char*:"314dc643fb763f2b8c0e2de00879":char*:"1058ad82120c3a10196bb36229c1":char*:"1058ad82120c3a10196bb36229c1"
+
+mbedtls_mpi_core_get_mont_r2_unsafe #10
+17:char*:"8335616aed761f1f7f44e6bd49e807b82e3bf2bf11bfa63":char*:"5d96a26447dca0cb7209c048f9e63e8dc623d67c8f44396":char*:"5d96a26447dca0cb7209c048f9e63e8dc623d67c8f44396"
+
+mbedtls_mpi_core_get_mont_r2_unsafe #11
+17:char*:"d1cece570f2f991013f26dd5b03c4c5b65f97be5905f36cb4664f2c78ff80aa8135a4aaf57ccb8a0aca2f394909a74cef1ef6758a64d11e2c149c393659d124bfc94196f0ce88f7d7d567efa5a649e2deefaa6e10fdc3deac60d606bf63fc540ac95294347031aefd73d6a9ee10188aaeb7a90d920894553cb196881691cadc51808715a07e8b24fcb1a63df047c7cdf084dd177ba368c806f3d51ddb5d3898c863e687ecaf7d649a57a46264a582f94d3c8f2edaf59f77a7f6bdaf83c991e8f06abe220ec8507386fce8c3da84c6c3903ab8f3ad4630a204196a7dbcbd9bcca4e40ec5cc5c09938d49f5e1e6181db8896f33bb12e6ef73f12ec5c5ea7a8a337":char*:"12d7243d92ebc8338221f6dcec8ad8a2ec64c10a98339c8721beb1cb79e629253a7aa35e25d5421e6c2b43ddc4310cf4443875c070a7a5a5cc2c4c3eefa8a133af2e477fb7bb5b5058c6120946a7f9f08f2fab51e2f243b9ba206d2bfd62e4ef647dda49100d7004794f28172be2d715905fbd2e9ab8588c774523c0e096b49b6855a10e5ce0d8498370949a29d71d293788bf10a71e2447d4b2f11959a72f7290e2950772d14c83f15532468745fa58a83fca8883b0b6169a27ec0cf922c4f39d283bb20fca5ff1de01d9c66b8a710108b951af634d56c843d9505bf2edd5a7b8f0b72a5c95672151e60075a78084e83fbe284617a90c74c8335cce38bb012e":char*:"12d7243d92ebc8338221f6dcec8ad8a2ec64c10a98339c8721beb1cb79e629253a7aa35e25d5421e6c2b43ddc4310cf4443875c070a7a5a5cc2c4c3eefa8a133af2e477fb7bb5b5058c6120946a7f9f08f2fab51e2f243b9ba206d2bfd62e4ef647dda49100d7004794f28172be2d715905fbd2e9ab8588c774523c0e096b49b6855a10e5ce0d8498370949a29d71d293788bf10a71e2447d4b2f11959a72f7290e2950772d14c83f15532468745fa58a83fca8883b0b6169a27ec0cf922c4f39d283bb20fca5ff1de01d9c66b8a710108b951af634d56c843d9505bf2edd5a7b8f0b72a5c95672151e60075a78084e83fbe284617a90c74c8335cce38bb012e"
+
+Fill random core: 0 bytes
+19:int:0:int:0:int:1:int:0:int:0
+
+Fill random core: 1 byte, RNG stops at 0
+19:int:1:int:-1:int:0:int:0:exp:1
+
+Fill random core: 1 byte, RNG just sufficient
+19:int:1:int:0:int:0:int:0:int:0
+
+Fill random core: 1 byte, RNG not exhausted
+19:int:1:int:1:int:0:int:0:int:0
+
+Fill random core: 1 byte, prior content nonzero
+19:int:1:int:0:int:0:int:0xba:int:0
+
+Fill random core: 1 byte, 1 extra limb
+19:int:1:int:0:int:1:int:0:int:0
+
+Fill random core: 1 byte, 1 extra limb, prior content nonzero
+19:int:1:int:0:int:1:int:0xba:int:0
+
+Fill random core: 8 bytes, RNG stops before
+19:int:8:int:-1:int:0:int:0:exp:1
+
+Fill random core: 8 bytes, RNG just sufficient
+19:int:8:int:0:int:0:int:0:int:0
+
+Fill random core: 8 bytes, RNG not exhausted
+19:int:8:int:1:int:0:int:0:int:0
+
+Fill random core: 8 bytes, prior content nonzero
+19:int:8:int:0:int:0:int:0xba:int:0
+
+Fill random core: 8 bytes, 1 extra limb
+19:int:8:int:0:int:1:int:0:int:0
+
+Fill random core: 8 bytes, 1 extra limb, prior content nonzero
+19:int:8:int:0:int:1:int:0xba:int:0
+
+Fill random core: 9 bytes, 1 missing limb
+19:int:9:int:0:int:-1:int:0:exp:2
+
+Fill random core: 42 bytes, RNG stops before
+19:int:42:int:-1:int:0:int:0:exp:1
+
+Fill random core: 42 bytes, RNG just sufficient
+19:int:42:int:0:int:0:int:0:int:0
+
+Fill random core: 42 bytes, RNG not exhausted
+19:int:42:int:1:int:0:int:0:int:0
+
+Fill random core: 42 bytes, prior content nonzero
+19:int:42:int:0:int:0:int:0xba:int:0
+
+Fill random core: 42 bytes, 1 extra limb
+19:int:42:int:0:int:1:int:0:int:0
+
+Fill random core: 42 bytes, 1 extra limb, prior content nonzero
+19:int:42:int:0:int:1:int:0xba:int:0
+
+Fill random core: 42 bytes, 1 missing limb
+19:int:42:int:0:int:-1:int:0:exp:2
+
+Fill random core: 42 bytes, 5 missing limbs
+19:int:42:int:0:int:-5:int:0:exp:2
+
+CLZ: 0 0: all ones
+4:int:0:int:0
+
+CLZ: 1 0
+4:int:1:int:0
+
+CLZ: 1 1
+4:int:1:int:1
+
+CLZ: 4 5
+4:int:4:int:5
+
+CLZ: 8 16
+4:int:8:int:16
+
+CLZ: 31 0
+4:int:31:int:0
+
+CLZ: 32 0
+4:int:32:int:0
+
+CLZ: 33 0
+4:int:33:int:0
+
+CLZ: 63 0
+4:int:63:int:0
+
+CLZ: 64 0
+4:int:64:int:0
+
+CLZ: 100000 0: skip overly long input
+4:int:100000:int:0
+

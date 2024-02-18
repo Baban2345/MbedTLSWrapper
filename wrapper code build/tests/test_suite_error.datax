@@ -1,0 +1,21 @@
+Single low error
+depends_on:0
+0:int:-0x0020:char*:"AES - Invalid key length"
+
+Single high error
+depends_on:1
+0:int:-0x4080:char*:"RSA - Bad input parameters to function"
+
+Low and high error
+depends_on:0:1
+0:int:-0x40A0:char*:"RSA - Bad input parameters to function \: AES - Invalid key length"
+
+Non existing high error
+0:int:-0x8880:char*:"UNKNOWN ERROR CODE (8880)"
+
+Non existing low error
+0:int:-0x007F:char*:"UNKNOWN ERROR CODE (007F)"
+
+Non existing low and high error
+0:int:-0x88FF:char*:"UNKNOWN ERROR CODE (8880) \: UNKNOWN ERROR CODE (007F)"
+

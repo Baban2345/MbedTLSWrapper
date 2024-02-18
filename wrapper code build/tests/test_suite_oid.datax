@@ -1,0 +1,243 @@
+OID get Any Policy certificate policy
+0:hex:"551D2000":char*:"Any Policy"
+
+OID get certificate policy invalid oid
+0:hex:"5533445566":char*:""
+
+OID get certificate policy wrong oid - id-ce-authorityKeyIdentifier
+0:hex:"551D23":char*:""
+
+OID get Ext Key Usage - id-kp-serverAuth
+1:hex:"2B06010505070301":char*:"TLS Web Server Authentication"
+
+OID get Ext Key Usage - id-kp-clientAuth
+1:hex:"2B06010505070302":char*:"TLS Web Client Authentication"
+
+OID get Ext Key Usage - id-kp-codeSigning
+1:hex:"2B06010505070303":char*:"Code Signing"
+
+OID get Ext Key Usage - id-kp-emailProtection
+1:hex:"2B06010505070304":char*:"E-mail Protection"
+
+OID get Ext Key Usage - id-kp-timeStamping
+1:hex:"2B06010505070308":char*:"Time Stamping"
+
+OID get Ext Key Usage - id-kp-OCSPSigning
+1:hex:"2B06010505070309":char*:"OCSP Signing"
+
+OID get Ext Key Usage - id-kp-wisun-fan-device
+1:hex:"2B0601040182E42501":char*:"Wi-SUN Alliance Field Area Network (FAN)"
+
+OID get Ext Key Usage invalid oid
+1:hex:"5533445566":char*:""
+
+OID get Ext Key Usage wrong oid - id-ce-authorityKeyIdentifier
+1:hex:"551D23":char*:""
+
+OID get x509 extension - id-ce-basicConstraints
+2:hex:"551D13":exp:0
+
+OID get x509 extension - id-ce-keyUsage
+2:hex:"551D0F":exp:1
+
+OID get x509 extension - id-ce-extKeyUsage
+2:hex:"551D25":exp:2
+
+OID get x509 extension - id-ce-subjectAltName
+2:hex:"551D11":exp:3
+
+OID get x509 extension - id-netscape-certtype
+2:hex:"6086480186F8420101":exp:4
+
+OID get x509 extension - id-ce-certificatePolicies
+2:hex:"551D20":exp:5
+
+OID get x509 extension - invalid oid
+2:hex:"5533445566":int:0
+
+OID get x509 extension - wrong oid - id-ce
+2:hex:"551D":int:0
+
+OID hash id - id-md5
+depends_on:0
+3:hex:"2A864886f70d0205":exp:6
+
+OID hash id - id-sha1
+depends_on:1
+3:hex:"2b0e03021a":exp:7
+
+OID hash id - id-sha224
+depends_on:2
+3:hex:"608648016503040204":exp:8
+
+OID hash id - id-sha256
+depends_on:3
+3:hex:"608648016503040201":exp:9
+
+OID hash id - id-sha384
+depends_on:4
+3:hex:"608648016503040202":exp:10
+
+OID hash id - id-sha512
+depends_on:5
+3:hex:"608648016503040203":exp:11
+
+OID hash id - id-sha3-224
+depends_on:6
+3:hex:"608648016503040207":exp:12
+
+OID hash id - id-sha3-256
+depends_on:7
+3:hex:"608648016503040208":exp:13
+
+OID hash id - id-sha3-384
+depends_on:8
+3:hex:"608648016503040209":exp:14
+
+OID hash id - id-sha3-512
+depends_on:9
+3:hex:"60864801650304020a":exp:15
+
+OID hash id - id-ripemd160
+depends_on:10
+3:hex:"2b24030201":exp:16
+
+OID hash id - invalid oid
+3:hex:"2B864886f70d0204":int:-1
+
+OID get numeric string - hardware module name
+5:hex:"2B06010505070804":int:0:char*:"1.3.6.1.5.5.7.8.4"
+
+OID get numeric string - multi-byte subidentifier
+5:hex:"29903C":int:0:char*:"1.1.2108"
+
+OID get numeric string - second component greater than 39
+5:hex:"81010000863A00":int:0:char*:"2.49.0.0.826.0"
+
+OID get numeric string - multi-byte first subidentifier
+5:hex:"8837":int:0:char*:"2.999"
+
+OID get numeric string - second subidentifier not terminated
+5:hex:"0081":exp:17:char*:""
+
+OID get numeric string - empty oid buffer
+5:hex:"":exp:17:char*:""
+
+OID get numeric string - no final / all bytes have top bit set
+5:hex:"818181":exp:17:char*:""
+
+OID get numeric string - 0.39
+5:hex:"27":int:0:char*:"0.39"
+
+OID get numeric string - 1.0
+5:hex:"28":int:0:char*:"1.0"
+
+OID get numeric string - 1.39
+5:hex:"4f":int:0:char*:"1.39"
+
+OID get numeric string - 2.0
+5:hex:"50":int:0:char*:"2.0"
+
+OID get numeric string - 1 byte first subidentifier beyond 2.39
+5:hex:"7f":int:0:char*:"2.47"
+
+OID get numeric string - 32-bit overflow
+5:hex:"C080808000":exp:18:char*:""
+
+OID get numeric string - 32-bit overflow, second subidentifier
+5:hex:"2BC080808000":exp:18:char*:""
+
+OID get numeric string - overlong encoding
+5:hex:"8001":exp:18:char*:""
+
+OID get numeric string - overlong encoding, second subidentifier
+5:hex:"2B8001":exp:18:char*:""
+
+OID from numeric string - hardware module name
+6:char*:"1.3.6.1.5.5.7.8.4":int:0:hex:"2B06010505070804"
+
+OID from numeric string - multi-byte subidentifier
+6:char*:"1.1.2108":int:0:hex:"29903C"
+
+OID from numeric string - second component greater than 39
+6:char*:"2.49.0.0.826.0":int:0:hex:"81010000863A00"
+
+OID from numeric string - multi-byte first subidentifier
+6:char*:"2.999":int:0:hex:"8837"
+
+OID from numeric string - empty string input
+6:char*:"":exp:18:hex:""
+
+OID from numeric string - first component not a number
+6:char*:"abc.1.2":exp:18:hex:""
+
+OID from numeric string - second component not a number
+6:char*:"1.abc.2":exp:18:hex:""
+
+OID from numeric string - first component too large
+6:char*:"3.1":exp:18:hex:""
+
+OID from numeric string - first component < 2, second > 39
+6:char*:"1.40":exp:18:hex:""
+
+OID from numeric string - third component not a number
+6:char*:"1.2.abc":exp:18:hex:""
+
+OID from numeric string - non-'.' separator between first and second
+6:char*:"1/2.3.4":exp:18:hex:""
+
+OID from numeric string - non-'.' separator between second and third
+6:char*:"1.2/3.4":exp:18:hex:""
+
+OID from numeric string - non-'.' separator between third and fourth
+6:char*:"1.2.3/4":exp:18:hex:""
+
+OID from numeric string - OID greater than max length (129 components)
+6:char*:"1.2.3.4.5.6.7.8.1.2.3.4.5.6.7.8.1.2.3.4.5.6.7.8.1.2.3.4.5.6.7.8.1.2.3.4.5.6.7.8.1.2.3.4.5.6.7.8.1.2.3.4.5.6.7.8.1.2.3.4.5.6.7.8.1.2.3.4.5.6.7.8.1.2.3.4.5.6.7.8.1.2.3.4.5.6.7.8.1.2.3.4.5.6.7.8.1.2.3.4.5.6.7.8.1.2.3.4.5.6.7.8.1.2.3.4.5.6.7.8.1.2.3.4.5.6.7.8.1":exp:18:hex:""
+
+OID from numeric string - OID with maximum subidentifier
+6:char*:"2.4294967215":int:0:hex:"8FFFFFFF7F"
+
+OID from numeric string - OID with overflowing subidentifier
+6:char*:"2.4294967216":exp:18:hex:""
+
+mbedtls_oid_get_md_hmac - RIPEMD160
+depends_on:10
+4:hex:"2B06010505080104":exp:16
+
+mbedtls_oid_get_md_hmac - SHA1
+depends_on:1
+4:hex:"2A864886F70D0207":exp:7
+
+mbedtls_oid_get_md_hmac - SHA224
+depends_on:2
+4:hex:"2A864886F70D0208":exp:8
+
+mbedtls_oid_get_md_hmac - SHA256
+depends_on:3
+4:hex:"2A864886F70D0209":exp:9
+
+mbedtls_oid_get_md_hmac - SHA384
+depends_on:4
+4:hex:"2A864886F70D020A":exp:10
+
+mbedtls_oid_get_md_hmac - SHA512
+depends_on:5
+4:hex:"2A864886F70D020B":exp:11
+
+mbedtls_oid_get_md_hmac - SHA3_224
+depends_on:6
+4:hex:"60864801650304020D":exp:12
+
+mbedtls_oid_get_md_hmac - SHA3_256
+depends_on:7
+4:hex:"60864801650304020E":exp:13
+
+mbedtls_oid_get_md_hmac - SHA3_384
+depends_on:8
+4:hex:"60864801650304020F":exp:14
+
+mbedtls_oid_get_md_hmac - SHA3_512
+depends_on:9
+4:hex:"608648016503040210":exp:15
+

@@ -1,0 +1,864 @@
+Constant-flow memcpy from offset: small
+12:int:0:int:5:int:10
+
+Constant-flow memcpy from offset: medium
+12:int:0:int:255:int:32
+
+Constant-flow memcpy from offset: large
+12:int:100:int:339:int:48
+
+mbedtls_ct_memcmp NULL
+0
+
+mbedtls_ct_memcmp len 1
+8:int:-1:int:1:int:0
+
+mbedtls_ct_memcmp len 3
+8:int:-1:int:3:int:0
+
+mbedtls_ct_memcmp len 4
+8:int:-1:int:4:int:0
+
+mbedtls_ct_memcmp len 5
+8:int:-1:int:5:int:0
+
+mbedtls_ct_memcmp len 15
+8:int:-1:int:15:int:0
+
+mbedtls_ct_memcmp len 16
+8:int:-1:int:16:int:0
+
+mbedtls_ct_memcmp len 17
+8:int:-1:int:17:int:0
+
+mbedtls_ct_memcmp len 1 different
+8:int:0:int:1:int:0
+
+mbedtls_ct_memcmp len 17 different
+8:int:0:int:17:int:0
+
+mbedtls_ct_memcmp len 17 different 1
+8:int:1:int:17:int:0
+
+mbedtls_ct_memcmp len 17 different 4
+8:int:4:int:17:int:0
+
+mbedtls_ct_memcmp len 17 different 10
+8:int:10:int:17:int:0
+
+mbedtls_ct_memcmp len 17 different 16
+8:int:16:int:17:int:0
+
+mbedtls_ct_memcmp len 1 offset 1 different
+8:int:0:int:1:int:1
+
+mbedtls_ct_memcmp len 17 offset 1 different
+8:int:0:int:17:int:1
+
+mbedtls_ct_memcmp len 17 offset 1 different 1
+8:int:1:int:17:int:1
+
+mbedtls_ct_memcmp len 17 offset 1 different 5
+8:int:5:int:17:int:1
+
+mbedtls_ct_memcmp len 1 offset 1
+8:int:-1:int:1:int:1
+
+mbedtls_ct_memcmp len 1 offset 2
+8:int:-1:int:1:int:2
+
+mbedtls_ct_memcmp len 1 offset 3
+8:int:-1:int:1:int:3
+
+mbedtls_ct_memcmp len 5 offset 1
+8:int:-1:int:5:int:1
+
+mbedtls_ct_memcmp len 5 offset 2
+8:int:-1:int:5:int:2
+
+mbedtls_ct_memcmp len 5 offset 3
+8:int:-1:int:5:int:3
+
+mbedtls_ct_memcmp len 17 offset 1
+8:int:-1:int:17:int:1
+
+mbedtls_ct_memcmp len 17 offset 2
+8:int:-1:int:17:int:2
+
+mbedtls_ct_memcmp len 17 offset 3
+8:int:-1:int:17:int:3
+
+mbedtls_ct_memcmp_single_bit_diff
+7
+
+mbedtls_ct_memcpy_if len 1 offset 0
+10:int:1:int:1:int:0
+
+mbedtls_ct_memcpy_if len 1 offset 1
+10:int:1:int:1:int:1
+
+mbedtls_ct_memcpy_if len 4 offset 0
+10:int:1:int:1:int:0
+
+mbedtls_ct_memcpy_if len 4 offset 1
+10:int:1:int:1:int:1
+
+mbedtls_ct_memcpy_if len 4 offset 2
+10:int:1:int:1:int:2
+
+mbedtls_ct_memcpy_if len 4 offset 3
+10:int:1:int:1:int:3
+
+mbedtls_ct_memcpy_if len 15 offset 0
+10:int:1:int:15:int:0
+
+mbedtls_ct_memcpy_if len 15 offset 1
+10:int:1:int:15:int:1
+
+mbedtls_ct_memcpy_if len 16 offset 0
+10:int:1:int:16:int:0
+
+mbedtls_ct_memcpy_if len 16 offset 1
+10:int:1:int:16:int:1
+
+mbedtls_ct_memcpy_if len 17 offset 0
+10:int:1:int:17:int:0
+
+mbedtls_ct_memcpy_if len 17 offset 1
+10:int:1:int:17:int:1
+
+mbedtls_ct_memcpy_if len 0 not eq
+10:int:0:int:17:int:0
+
+mbedtls_ct_memcpy_if len 5 offset 1 not eq
+10:int:0:int:5:int:1
+
+mbedtls_ct_memcpy_if len 17 offset 3 not eq
+10:int:0:int:17:int:3
+
+mbedtls_ct_bool 0
+1:char*:"0x0"
+
+mbedtls_ct_bool 1
+1:char*:"0x1"
+
+mbedtls_ct_bool 4
+1:char*:"0x4"
+
+mbedtls_ct_bool 0xfffffff
+1:char*:"0xfffffff"
+
+mbedtls_ct_bool 0x7fffffff
+1:char*:"0x7fffffff"
+
+mbedtls_ct_bool 0xfffffffe
+1:char*:"0xfffffffe"
+
+mbedtls_ct_bool 0xffffffff
+1:char*:"0xffffffff"
+
+mbedtls_ct_bool 0x0fffffffffffffff
+1:char*:"0x0fffffffffffffff"
+
+mbedtls_ct_bool 0x7fffffffffffffff
+1:char*:"0x7fffffffffffffff"
+
+mbedtls_ct_bool 0xffffffffffffffff
+1:char*:"0xffffffffffffffff"
+
+mbedtls_ct_bool_xxx 0x0 0x0
+2:char*:"0x0":char*:"0x0"
+
+mbedtls_ct_bool_xxx 0x0 0x1
+2:char*:"0x0":char*:"0x1"
+
+mbedtls_ct_bool_xxx 0x0 0x7fffffff
+2:char*:"0x0":char*:"0x7fffffff"
+
+mbedtls_ct_bool_xxx 0x0 0xffffffff
+2:char*:"0x0":char*:"0xffffffff"
+
+mbedtls_ct_bool_xxx 0x0 0x7fffffffffffffff
+2:char*:"0x0":char*:"0x7fffffffffffffff"
+
+mbedtls_ct_bool_xxx 0x0 0xffffffffffffffff
+2:char*:"0x0":char*:"0xffffffffffffffff"
+
+mbedtls_ct_bool_xxx 0x1 0x0
+2:char*:"0x1":char*:"0x0"
+
+mbedtls_ct_bool_xxx 0x1 0x1
+2:char*:"0x1":char*:"0x1"
+
+mbedtls_ct_bool_xxx 0x1 0x7fffffff
+2:char*:"0x1":char*:"0x7fffffff"
+
+mbedtls_ct_bool_xxx 0x1 0xffffffff
+2:char*:"0x1":char*:"0xffffffff"
+
+mbedtls_ct_bool_xxx 0x1 0x7fffffffffffffff
+2:char*:"0x1":char*:"0x7fffffffffffffff"
+
+mbedtls_ct_bool_xxx 0x1 0xffffffffffffffff
+2:char*:"0x1":char*:"0xffffffffffffffff"
+
+mbedtls_ct_bool_xxx 0x7fffffff 0x0
+2:char*:"0x7fffffff":char*:"0x0"
+
+mbedtls_ct_bool_xxx 0x7fffffff 0x1
+2:char*:"0x7fffffff":char*:"0x1"
+
+mbedtls_ct_bool_xxx 0x7fffffff 0x7fffffff
+2:char*:"0x7fffffff":char*:"0x7fffffff"
+
+mbedtls_ct_bool_xxx 0x7fffffff 0xffffffff
+2:char*:"0x7fffffff":char*:"0xffffffff"
+
+mbedtls_ct_bool_xxx 0x7fffffff 0x7fffffffffffffff
+2:char*:"0x7fffffff":char*:"0x7fffffffffffffff"
+
+mbedtls_ct_bool_xxx 0x7fffffff 0xffffffffffffffff
+2:char*:"0x7fffffff":char*:"0xffffffffffffffff"
+
+mbedtls_ct_bool_xxx 0xffffffff 0x0
+2:char*:"0xffffffff":char*:"0x0"
+
+mbedtls_ct_bool_xxx 0xffffffff 0x1
+2:char*:"0xffffffff":char*:"0x1"
+
+mbedtls_ct_bool_xxx 0xffffffff 0x7fffffff
+2:char*:"0xffffffff":char*:"0x7fffffff"
+
+mbedtls_ct_bool_xxx 0xffffffff 0xffffffff
+2:char*:"0xffffffff":char*:"0xffffffff"
+
+mbedtls_ct_bool_xxx 0xffffffff 0x7fffffffffffffff
+2:char*:"0xffffffff":char*:"0x7fffffffffffffff"
+
+mbedtls_ct_bool_xxx 0xffffffff 0xffffffffffffffff
+2:char*:"0xffffffff":char*:"0xffffffffffffffff"
+
+mbedtls_ct_bool_xxx 0x7fffffffffffffff 0x0
+2:char*:"0x7fffffffffffffff":char*:"0x0"
+
+mbedtls_ct_bool_xxx 0x7fffffffffffffff 0x1
+2:char*:"0x7fffffffffffffff":char*:"0x1"
+
+mbedtls_ct_bool_xxx 0x7fffffffffffffff 0x7fffffff
+2:char*:"0x7fffffffffffffff":char*:"0x7fffffff"
+
+mbedtls_ct_bool_xxx 0x7fffffffffffffff 0xffffffff
+2:char*:"0x7fffffffffffffff":char*:"0xffffffff"
+
+mbedtls_ct_bool_xxx 0x7fffffffffffffff 0x7fffffffffffffff
+2:char*:"0x7fffffffffffffff":char*:"0x7fffffffffffffff"
+
+mbedtls_ct_bool_xxx 0x7fffffffffffffff 0xffffffffffffffff
+2:char*:"0x7fffffffffffffff":char*:"0xffffffffffffffff"
+
+mbedtls_ct_bool_xxx 0xffffffffffffffff 0x0
+2:char*:"0xffffffffffffffff":char*:"0x0"
+
+mbedtls_ct_bool_xxx 0xffffffffffffffff 0x1
+2:char*:"0xffffffffffffffff":char*:"0x1"
+
+mbedtls_ct_bool_xxx 0xffffffffffffffff 0x7fffffff
+2:char*:"0xffffffffffffffff":char*:"0x7fffffff"
+
+mbedtls_ct_bool_xxx 0xffffffffffffffff 0xffffffff
+2:char*:"0xffffffffffffffff":char*:"0xffffffff"
+
+mbedtls_ct_bool_xxx 0xffffffffffffffff 0x7fffffffffffffff
+2:char*:"0xffffffffffffffff":char*:"0x7fffffffffffffff"
+
+mbedtls_ct_bool_xxx 0xffffffffffffffff 0xffffffffffffffff
+2:char*:"0xffffffffffffffff":char*:"0xffffffffffffffff"
+
+mbedtls_ct_bool_xxx 138 256
+2:char*:"138":char*:"256"
+
+mbedtls_ct_bool_xxx 256 138
+2:char*:"256":char*:"138"
+
+mbedtls_ct_bool_xxx 6 6
+2:char*:"0x6":char*:"0x6"
+
+mbedtls_ct_uchar_in_range_if 0 0 0
+3:int:0:int:0:int:0
+
+mbedtls_ct_uchar_in_range_if 0 0 100
+3:int:0:int:0:int:100
+
+mbedtls_ct_uchar_in_range_if 0 0 255
+3:int:0:int:0:int:255
+
+mbedtls_ct_uchar_in_range_if 0 65 0
+3:int:0:int:65:int:0
+
+mbedtls_ct_uchar_in_range_if 0 65 100
+3:int:0:int:65:int:100
+
+mbedtls_ct_uchar_in_range_if 0 65 255
+3:int:0:int:65:int:255
+
+mbedtls_ct_uchar_in_range_if 0 90 0
+3:int:0:int:90:int:0
+
+mbedtls_ct_uchar_in_range_if 0 90 100
+3:int:0:int:90:int:100
+
+mbedtls_ct_uchar_in_range_if 0 90 255
+3:int:0:int:90:int:255
+
+mbedtls_ct_uchar_in_range_if 0 255 0
+3:int:0:int:255:int:0
+
+mbedtls_ct_uchar_in_range_if 0 255 100
+3:int:0:int:255:int:100
+
+mbedtls_ct_uchar_in_range_if 0 255 255
+3:int:0:int:255:int:255
+
+mbedtls_ct_uchar_in_range_if 65 0 0
+3:int:65:int:0:int:0
+
+mbedtls_ct_uchar_in_range_if 65 0 100
+3:int:65:int:0:int:100
+
+mbedtls_ct_uchar_in_range_if 65 0 255
+3:int:65:int:0:int:255
+
+mbedtls_ct_uchar_in_range_if 65 65 0
+3:int:65:int:65:int:0
+
+mbedtls_ct_uchar_in_range_if 65 65 100
+3:int:65:int:65:int:100
+
+mbedtls_ct_uchar_in_range_if 65 65 255
+3:int:65:int:65:int:255
+
+mbedtls_ct_uchar_in_range_if 65 90 0
+3:int:65:int:90:int:0
+
+mbedtls_ct_uchar_in_range_if 65 90 100
+3:int:65:int:90:int:100
+
+mbedtls_ct_uchar_in_range_if 65 90 255
+3:int:65:int:90:int:255
+
+mbedtls_ct_uchar_in_range_if 65 255 0
+3:int:65:int:255:int:0
+
+mbedtls_ct_uchar_in_range_if 65 255 100
+3:int:65:int:255:int:100
+
+mbedtls_ct_uchar_in_range_if 65 255 255
+3:int:65:int:255:int:255
+
+mbedtls_ct_uchar_in_range_if 90 0 0
+3:int:90:int:0:int:0
+
+mbedtls_ct_uchar_in_range_if 90 0 100
+3:int:90:int:0:int:100
+
+mbedtls_ct_uchar_in_range_if 90 0 255
+3:int:90:int:0:int:255
+
+mbedtls_ct_uchar_in_range_if 90 65 0
+3:int:90:int:65:int:0
+
+mbedtls_ct_uchar_in_range_if 90 65 100
+3:int:90:int:65:int:100
+
+mbedtls_ct_uchar_in_range_if 90 65 255
+3:int:90:int:65:int:255
+
+mbedtls_ct_uchar_in_range_if 90 90 0
+3:int:90:int:90:int:0
+
+mbedtls_ct_uchar_in_range_if 90 90 100
+3:int:90:int:90:int:100
+
+mbedtls_ct_uchar_in_range_if 90 90 255
+3:int:90:int:90:int:255
+
+mbedtls_ct_uchar_in_range_if 90 255 0
+3:int:90:int:255:int:0
+
+mbedtls_ct_uchar_in_range_if 90 255 100
+3:int:90:int:255:int:100
+
+mbedtls_ct_uchar_in_range_if 90 255 255
+3:int:90:int:255:int:255
+
+mbedtls_ct_uchar_in_range_if 255 0 0
+3:int:255:int:0:int:0
+
+mbedtls_ct_uchar_in_range_if 255 0 100
+3:int:255:int:0:int:100
+
+mbedtls_ct_uchar_in_range_if 255 0 255
+3:int:255:int:0:int:255
+
+mbedtls_ct_uchar_in_range_if 255 65 0
+3:int:255:int:65:int:0
+
+mbedtls_ct_uchar_in_range_if 255 65 100
+3:int:255:int:65:int:100
+
+mbedtls_ct_uchar_in_range_if 255 65 255
+3:int:255:int:65:int:255
+
+mbedtls_ct_uchar_in_range_if 255 90 0
+3:int:255:int:90:int:0
+
+mbedtls_ct_uchar_in_range_if 255 90 100
+3:int:255:int:90:int:100
+
+mbedtls_ct_uchar_in_range_if 255 90 255
+3:int:255:int:90:int:255
+
+mbedtls_ct_uchar_in_range_if 255 255 0
+3:int:255:int:255:int:0
+
+mbedtls_ct_uchar_in_range_if 255 255 100
+3:int:255:int:255:int:100
+
+mbedtls_ct_uchar_in_range_if 255 255 255
+3:int:255:int:255:int:255
+
+mbedtls_ct_if 0x0 0x0 0x0
+5:char*:"0x0":char*:"0x0":char*:"0x0"
+
+mbedtls_ct_if 0x0 0x0 0x1
+5:char*:"0x0":char*:"0x0":char*:"0x1"
+
+mbedtls_ct_if 0x0 0x0 0x7fffffff
+5:char*:"0x0":char*:"0x0":char*:"0x7fffffff"
+
+mbedtls_ct_if 0x0 0x0 0xffffffff
+5:char*:"0x0":char*:"0x0":char*:"0xffffffff"
+
+mbedtls_ct_if 0x0 0x0 0x7fffffffffffffff
+5:char*:"0x0":char*:"0x0":char*:"0x7fffffffffffffff"
+
+mbedtls_ct_if 0x0 0x0 0xffffffffffffffff
+5:char*:"0x0":char*:"0x0":char*:"0xffffffffffffffff"
+
+mbedtls_ct_if 0x0 0x1 0x0
+5:char*:"0x0":char*:"0x1":char*:"0x0"
+
+mbedtls_ct_if 0x0 0x1 0x1
+5:char*:"0x0":char*:"0x1":char*:"0x1"
+
+mbedtls_ct_if 0x0 0x1 0x7fffffff
+5:char*:"0x0":char*:"0x1":char*:"0x7fffffff"
+
+mbedtls_ct_if 0x0 0x1 0xffffffff
+5:char*:"0x0":char*:"0x1":char*:"0xffffffff"
+
+mbedtls_ct_if 0x0 0x1 0x7fffffffffffffff
+5:char*:"0x0":char*:"0x1":char*:"0x7fffffffffffffff"
+
+mbedtls_ct_if 0x0 0x1 0xffffffffffffffff
+5:char*:"0x0":char*:"0x1":char*:"0xffffffffffffffff"
+
+mbedtls_ct_if 0x0 0x7fffffff 0x0
+5:char*:"0x0":char*:"0x7fffffff":char*:"0x0"
+
+mbedtls_ct_if 0x0 0x7fffffff 0x1
+5:char*:"0x0":char*:"0x7fffffff":char*:"0x1"
+
+mbedtls_ct_if 0x0 0x7fffffff 0x7fffffff
+5:char*:"0x0":char*:"0x7fffffff":char*:"0x7fffffff"
+
+mbedtls_ct_if 0x0 0x7fffffff 0xffffffff
+5:char*:"0x0":char*:"0x7fffffff":char*:"0xffffffff"
+
+mbedtls_ct_if 0x0 0x7fffffff 0x7fffffffffffffff
+5:char*:"0x0":char*:"0x7fffffff":char*:"0x7fffffffffffffff"
+
+mbedtls_ct_if 0x0 0x7fffffff 0xffffffffffffffff
+5:char*:"0x0":char*:"0x7fffffff":char*:"0xffffffffffffffff"
+
+mbedtls_ct_if 0x0 0xffffffff 0x0
+5:char*:"0x0":char*:"0xffffffff":char*:"0x0"
+
+mbedtls_ct_if 0x0 0xffffffff 0x1
+5:char*:"0x0":char*:"0xffffffff":char*:"0x1"
+
+mbedtls_ct_if 0x0 0xffffffff 0x7fffffff
+5:char*:"0x0":char*:"0xffffffff":char*:"0x7fffffff"
+
+mbedtls_ct_if 0x0 0xffffffff 0xffffffff
+5:char*:"0x0":char*:"0xffffffff":char*:"0xffffffff"
+
+mbedtls_ct_if 0x0 0xffffffff 0x7fffffffffffffff
+5:char*:"0x0":char*:"0xffffffff":char*:"0x7fffffffffffffff"
+
+mbedtls_ct_if 0x0 0xffffffff 0xffffffffffffffff
+5:char*:"0x0":char*:"0xffffffff":char*:"0xffffffffffffffff"
+
+mbedtls_ct_if 0x0 0x7fffffffffffffff 0x0
+5:char*:"0x0":char*:"0x7fffffffffffffff":char*:"0x0"
+
+mbedtls_ct_if 0x0 0x7fffffffffffffff 0x1
+5:char*:"0x0":char*:"0x7fffffffffffffff":char*:"0x1"
+
+mbedtls_ct_if 0x0 0x7fffffffffffffff 0x7fffffff
+5:char*:"0x0":char*:"0x7fffffffffffffff":char*:"0x7fffffff"
+
+mbedtls_ct_if 0x0 0x7fffffffffffffff 0xffffffff
+5:char*:"0x0":char*:"0x7fffffffffffffff":char*:"0xffffffff"
+
+mbedtls_ct_if 0x0 0x7fffffffffffffff 0x7fffffffffffffff
+5:char*:"0x0":char*:"0x7fffffffffffffff":char*:"0x7fffffffffffffff"
+
+mbedtls_ct_if 0x0 0x7fffffffffffffff 0xffffffffffffffff
+5:char*:"0x0":char*:"0x7fffffffffffffff":char*:"0xffffffffffffffff"
+
+mbedtls_ct_if 0x0 0xffffffffffffffff 0x0
+5:char*:"0x0":char*:"0xffffffffffffffff":char*:"0x0"
+
+mbedtls_ct_if 0x0 0xffffffffffffffff 0x1
+5:char*:"0x0":char*:"0xffffffffffffffff":char*:"0x1"
+
+mbedtls_ct_if 0x0 0xffffffffffffffff 0x7fffffff
+5:char*:"0x0":char*:"0xffffffffffffffff":char*:"0x7fffffff"
+
+mbedtls_ct_if 0x0 0xffffffffffffffff 0xffffffff
+5:char*:"0x0":char*:"0xffffffffffffffff":char*:"0xffffffff"
+
+mbedtls_ct_if 0x0 0xffffffffffffffff 0x7fffffffffffffff
+5:char*:"0x0":char*:"0xffffffffffffffff":char*:"0x7fffffffffffffff"
+
+mbedtls_ct_if 0x0 0xffffffffffffffff 0xffffffffffffffff
+5:char*:"0x0":char*:"0xffffffffffffffff":char*:"0xffffffffffffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0x0 0x0
+5:char*:"0xffffffffffffffff":char*:"0x0":char*:"0x0"
+
+mbedtls_ct_if 0xffffffffffffffff 0x0 0x1
+5:char*:"0xffffffffffffffff":char*:"0x0":char*:"0x1"
+
+mbedtls_ct_if 0xffffffffffffffff 0x0 0x7fffffff
+5:char*:"0xffffffffffffffff":char*:"0x0":char*:"0x7fffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0x0 0xffffffff
+5:char*:"0xffffffffffffffff":char*:"0x0":char*:"0xffffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0x0 0x7fffffffffffffff
+5:char*:"0xffffffffffffffff":char*:"0x0":char*:"0x7fffffffffffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0x0 0xffffffffffffffff
+5:char*:"0xffffffffffffffff":char*:"0x0":char*:"0xffffffffffffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0x1 0x0
+5:char*:"0xffffffffffffffff":char*:"0x1":char*:"0x0"
+
+mbedtls_ct_if 0xffffffffffffffff 0x1 0x1
+5:char*:"0xffffffffffffffff":char*:"0x1":char*:"0x1"
+
+mbedtls_ct_if 0xffffffffffffffff 0x1 0x7fffffff
+5:char*:"0xffffffffffffffff":char*:"0x1":char*:"0x7fffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0x1 0xffffffff
+5:char*:"0xffffffffffffffff":char*:"0x1":char*:"0xffffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0x1 0x7fffffffffffffff
+5:char*:"0xffffffffffffffff":char*:"0x1":char*:"0x7fffffffffffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0x1 0xffffffffffffffff
+5:char*:"0xffffffffffffffff":char*:"0x1":char*:"0xffffffffffffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0x7fffffff 0x0
+5:char*:"0xffffffffffffffff":char*:"0x7fffffff":char*:"0x0"
+
+mbedtls_ct_if 0xffffffffffffffff 0x7fffffff 0x1
+5:char*:"0xffffffffffffffff":char*:"0x7fffffff":char*:"0x1"
+
+mbedtls_ct_if 0xffffffffffffffff 0x7fffffff 0x7fffffff
+5:char*:"0xffffffffffffffff":char*:"0x7fffffff":char*:"0x7fffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0x7fffffff 0xffffffff
+5:char*:"0xffffffffffffffff":char*:"0x7fffffff":char*:"0xffffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0x7fffffff 0x7fffffffffffffff
+5:char*:"0xffffffffffffffff":char*:"0x7fffffff":char*:"0x7fffffffffffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0x7fffffff 0xffffffffffffffff
+5:char*:"0xffffffffffffffff":char*:"0x7fffffff":char*:"0xffffffffffffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0xffffffff 0x0
+5:char*:"0xffffffffffffffff":char*:"0xffffffff":char*:"0x0"
+
+mbedtls_ct_if 0xffffffffffffffff 0xffffffff 0x1
+5:char*:"0xffffffffffffffff":char*:"0xffffffff":char*:"0x1"
+
+mbedtls_ct_if 0xffffffffffffffff 0xffffffff 0x7fffffff
+5:char*:"0xffffffffffffffff":char*:"0xffffffff":char*:"0x7fffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0xffffffff 0xffffffff
+5:char*:"0xffffffffffffffff":char*:"0xffffffff":char*:"0xffffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0xffffffff 0x7fffffffffffffff
+5:char*:"0xffffffffffffffff":char*:"0xffffffff":char*:"0x7fffffffffffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0xffffffff 0xffffffffffffffff
+5:char*:"0xffffffffffffffff":char*:"0xffffffff":char*:"0xffffffffffffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0x7fffffffffffffff 0x0
+5:char*:"0xffffffffffffffff":char*:"0x7fffffffffffffff":char*:"0x0"
+
+mbedtls_ct_if 0xffffffffffffffff 0x7fffffffffffffff 0x1
+5:char*:"0xffffffffffffffff":char*:"0x7fffffffffffffff":char*:"0x1"
+
+mbedtls_ct_if 0xffffffffffffffff 0x7fffffffffffffff 0x7fffffff
+5:char*:"0xffffffffffffffff":char*:"0x7fffffffffffffff":char*:"0x7fffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0x7fffffffffffffff 0xffffffff
+5:char*:"0xffffffffffffffff":char*:"0x7fffffffffffffff":char*:"0xffffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0x7fffffffffffffff 0x7fffffffffffffff
+5:char*:"0xffffffffffffffff":char*:"0x7fffffffffffffff":char*:"0x7fffffffffffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0x7fffffffffffffff 0xffffffffffffffff
+5:char*:"0xffffffffffffffff":char*:"0x7fffffffffffffff":char*:"0xffffffffffffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0xffffffffffffffff 0x0
+5:char*:"0xffffffffffffffff":char*:"0xffffffffffffffff":char*:"0x0"
+
+mbedtls_ct_if 0xffffffffffffffff 0xffffffffffffffff 0x1
+5:char*:"0xffffffffffffffff":char*:"0xffffffffffffffff":char*:"0x1"
+
+mbedtls_ct_if 0xffffffffffffffff 0xffffffffffffffff 0x7fffffff
+5:char*:"0xffffffffffffffff":char*:"0xffffffffffffffff":char*:"0x7fffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0xffffffffffffffff 0xffffffff
+5:char*:"0xffffffffffffffff":char*:"0xffffffffffffffff":char*:"0xffffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0xffffffffffffffff 0x7fffffffffffffff
+5:char*:"0xffffffffffffffff":char*:"0xffffffffffffffff":char*:"0x7fffffffffffffff"
+
+mbedtls_ct_if 0xffffffffffffffff 0xffffffffffffffff 0xffffffffffffffff
+5:char*:"0xffffffffffffffff":char*:"0xffffffffffffffff":char*:"0xffffffffffffffff"
+
+mbedtls_ct_error_if 0 0 0
+4:int:0:int:0:int:0
+
+mbedtls_ct_error_if 0 0 -1
+4:int:0:int:0:int:-1
+
+mbedtls_ct_error_if 0 0 -32766
+4:int:0:int:0:int:-32766
+
+mbedtls_ct_error_if 0 0 -32767
+4:int:0:int:0:int:-32767
+
+mbedtls_ct_error_if 0 -1 0
+4:int:0:int:-1:int:0
+
+mbedtls_ct_error_if 0 -1 -1
+4:int:0:int:-1:int:-1
+
+mbedtls_ct_error_if 0 -1 -32766
+4:int:0:int:-1:int:-32766
+
+mbedtls_ct_error_if 0 -1 -32767
+4:int:0:int:-1:int:-32767
+
+mbedtls_ct_error_if 0 -32766 0
+4:int:0:int:-32766:int:0
+
+mbedtls_ct_error_if 0 -32766 -1
+4:int:0:int:-32766:int:-1
+
+mbedtls_ct_error_if 0 -32766 -32766
+4:int:0:int:-32766:int:-32766
+
+mbedtls_ct_error_if 0 -32766 -32767
+4:int:0:int:-32766:int:-32767
+
+mbedtls_ct_error_if 0 -32767 0
+4:int:0:int:-32767:int:0
+
+mbedtls_ct_error_if 0 -32767 -1
+4:int:0:int:-32767:int:-1
+
+mbedtls_ct_error_if 0 -32767 -32766
+4:int:0:int:-32767:int:-32766
+
+mbedtls_ct_error_if 0 -32767 -32767
+4:int:0:int:-32767:int:-32767
+
+mbedtls_ct_error_if 1 0 0
+4:int:1:int:0:int:0
+
+mbedtls_ct_error_if 1 0 -1
+4:int:1:int:0:int:-1
+
+mbedtls_ct_error_if 1 0 -32766
+4:int:1:int:0:int:-32766
+
+mbedtls_ct_error_if 1 0 -32767
+4:int:1:int:0:int:-32767
+
+mbedtls_ct_error_if 1 -1 0
+4:int:1:int:-1:int:0
+
+mbedtls_ct_error_if 1 -1 -1
+4:int:1:int:-1:int:-1
+
+mbedtls_ct_error_if 1 -1 -32766
+4:int:1:int:-1:int:-32766
+
+mbedtls_ct_error_if 1 -1 -32767
+4:int:1:int:-1:int:-32767
+
+mbedtls_ct_error_if 1 -32766 0
+4:int:1:int:-32766:int:0
+
+mbedtls_ct_error_if 1 -32766 -1
+4:int:1:int:-32766:int:-1
+
+mbedtls_ct_error_if 1 -32766 -32766
+4:int:1:int:-32766:int:-32766
+
+mbedtls_ct_error_if 1 -32766 -32767
+4:int:1:int:-32766:int:-32767
+
+mbedtls_ct_error_if 1 -32767 0
+4:int:1:int:-32767:int:0
+
+mbedtls_ct_error_if 1 -32767 -1
+4:int:1:int:-32767:int:-1
+
+mbedtls_ct_error_if 1 -32767 -32766
+4:int:1:int:-32767:int:-32766
+
+mbedtls_ct_error_if 1 -32767 -32767
+4:int:1:int:-32767:int:-32767
+
+mbedtls_ct_zeroize_if 0x0 0
+6:char*:"0x0":int:0
+
+mbedtls_ct_zeroize_if 0x0 1
+6:char*:"0x0":int:1
+
+mbedtls_ct_zeroize_if 0x0 1024
+6:char*:"0x0":int:1024
+
+mbedtls_ct_zeroize_if 0xffffffffffffffff 0
+6:char*:"0xffffffffffffffff":int:0
+
+mbedtls_ct_zeroize_if 0xffffffffffffffff 1
+6:char*:"0xffffffffffffffff":int:1
+
+mbedtls_ct_zeroize_if 0xffffffffffffffff 4
+6:char*:"0xffffffffffffffff":int:4
+
+mbedtls_ct_zeroize_if 0xffffffffffffffff 5
+6:char*:"0xffffffffffffffff":int:5
+
+mbedtls_ct_zeroize_if 0xffffffffffffffff 7
+6:char*:"0xffffffffffffffff":int:7
+
+mbedtls_ct_zeroize_if 0xffffffffffffffff 8
+6:char*:"0xffffffffffffffff":int:8
+
+mbedtls_ct_zeroize_if 0xffffffffffffffff 9
+6:char*:"0xffffffffffffffff":int:9
+
+mbedtls_ct_zeroize_if 0xffffffffffffffff 1024
+6:char*:"0xffffffffffffffff":int:1024
+
+mbedtls_ct_memmove_left 0 0
+11:int:0:int:0
+
+mbedtls_ct_memmove_left 1 0
+11:int:1:int:0
+
+mbedtls_ct_memmove_left 1 1
+11:int:1:int:1
+
+mbedtls_ct_memmove_left 16 0
+11:int:16:int:0
+
+mbedtls_ct_memmove_left 16 1
+11:int:16:int:1
+
+mbedtls_ct_memmove_left 16 4
+11:int:16:int:4
+
+mbedtls_ct_memmove_left 16 15
+11:int:16:int:15
+
+mbedtls_ct_memmove_left 16 16
+11:int:16:int:16
+
+mbedtls_ct_memcmp_partial -1 0 0 0
+9:int:-1:int:0:int:0:int:0
+
+mbedtls_ct_memcmp_partial 0 1 0 0
+9:int:0:int:1:int:0:int:0
+
+mbedtls_ct_memcmp_partial 0 1 1 0
+9:int:0:int:1:int:1:int:0
+
+mbedtls_ct_memcmp_partial 0 1 0 1
+9:int:0:int:1:int:0:int:1
+
+mbedtls_ct_memcmp_partial -1 1 0 0
+9:int:-1:int:1:int:0:int:0
+
+mbedtls_ct_memcmp_partial 0 2 0 1
+9:int:0:int:2:int:0:int:1
+
+mbedtls_ct_memcmp_partial 0 2 1 0
+9:int:0:int:2:int:1:int:0
+
+mbedtls_ct_memcmp_partial 0 16 4 4
+9:int:0:int:16:int:4:int:4
+
+mbedtls_ct_memcmp_partial 2 16 4 4
+9:int:2:int:16:int:4:int:4
+
+mbedtls_ct_memcmp_partial 3 16 4 4
+9:int:3:int:16:int:4:int:4
+
+mbedtls_ct_memcmp_partial 4 16 4 4
+9:int:4:int:16:int:4:int:4
+
+mbedtls_ct_memcmp_partial 7 16 4 4
+9:int:7:int:16:int:4:int:4
+
+mbedtls_ct_memcmp_partial 11 16 4 4
+9:int:11:int:16:int:4:int:4
+
+mbedtls_ct_memcmp_partial 12 16 4 4
+9:int:12:int:16:int:4:int:4
+
+mbedtls_ct_memcmp_partial 15 16 4 4
+9:int:15:int:16:int:4:int:4
+
+mbedtls_ct_memcmp_partial 15 16 4 0
+9:int:15:int:16:int:4:int:0
+
+mbedtls_ct_memcmp_partial 15 16 0 4
+9:int:15:int:16:int:0:int:4
+
+mbedtls_ct_memcmp_partial 0 16 0 0
+9:int:0:int:16:int:0:int:0
+
+mbedtls_ct_memcmp_partial 15 16 0 0
+9:int:15:int:16:int:0:int:0
+
+mbedtls_ct_memcmp_partial -1 16 0 0
+9:int:-1:int:16:int:0:int:0
+
+mbedtls_ct_memcmp_partial -1 16 12 4
+9:int:-1:int:16:int:12:int:4
+
+mbedtls_ct_memcmp_partial -1 16 8 8
+9:int:-1:int:16:int:8:int:8
+

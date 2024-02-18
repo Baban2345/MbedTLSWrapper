@@ -1,0 +1,156 @@
+Public key write check RSA
+depends_on:0:1:2
+0:char*:"data_files/server1.pubkey":exp:0
+
+Public key write check RSA (DER)
+depends_on:0
+0:char*:"data_files/server1.pubkey.der":exp:1
+
+Public key write check RSA 4096
+depends_on:0:1:2
+0:char*:"data_files/rsa4096_pub.pem":exp:0
+
+Public key write check RSA 4096 (DER)
+depends_on:0
+0:char*:"data_files/rsa4096_pub.der":exp:1
+
+Public key write check EC 192 bits
+depends_on:3:1:2:4
+0:char*:"data_files/ec_pub.pem":exp:0
+
+Public key write check EC 192 bits (DER)
+depends_on:3:4
+0:char*:"data_files/ec_pub.der":exp:1
+
+Public key write check EC 521 bits
+depends_on:3:1:2:5
+0:char*:"data_files/ec_521_pub.pem":exp:0
+
+Public key write check EC 521 bits (DER)
+depends_on:3:5
+0:char*:"data_files/ec_521_pub.der":exp:1
+
+Public key write check EC Brainpool 512 bits
+depends_on:3:1:2:6
+0:char*:"data_files/ec_bp512_pub.pem":exp:0
+
+Public key write check EC Brainpool 512 bits (DER)
+depends_on:3:6
+0:char*:"data_files/ec_bp512_pub.der":exp:1
+
+Public key write check EC X25519
+depends_on:3:1:2:7
+0:char*:"data_files/ec_x25519_pub.pem":exp:0
+
+Public key write check EC X25519 (DER)
+depends_on:3:7
+0:char*:"data_files/ec_x25519_pub.der":exp:1
+
+Public key write check EC X448
+depends_on:3:1:2:8
+0:char*:"data_files/ec_x448_pub.pem":exp:0
+
+Public key write check EC X448 (DER)
+depends_on:3:8
+0:char*:"data_files/ec_x448_pub.der":exp:1
+
+Private key write check RSA
+depends_on:0:1:2
+1:char*:"data_files/server1.key":exp:0
+
+Private key write check RSA (DER)
+depends_on:0
+1:char*:"data_files/server1.key.der":exp:1
+
+Private key write check RSA 4096
+depends_on:0:1:2
+1:char*:"data_files/rsa4096_prv.pem":exp:0
+
+Private key write check RSA 4096 (DER)
+depends_on:0
+1:char*:"data_files/rsa4096_prv.der":exp:1
+
+Private key write check EC 192 bits
+depends_on:3:1:2:4
+1:char*:"data_files/ec_prv.sec1.pem":exp:0
+
+Private key write check EC 192 bits (DER)
+depends_on:3:4
+1:char*:"data_files/ec_prv.sec1.der":exp:1
+
+Private key write check EC 256 bits (top bit set)
+depends_on:3:1:2:9
+1:char*:"data_files/ec_256_long_prv.pem":exp:0
+
+Private key write check EC 256 bits (top bit set) (DER)
+depends_on:3:9
+1:char*:"data_files/ec_256_long_prv.der":exp:1
+
+Private key write check EC 521 bits
+depends_on:3:1:2:5
+1:char*:"data_files/ec_521_prv.pem":exp:0
+
+Private key write check EC 521 bits (DER)
+depends_on:3:5
+1:char*:"data_files/ec_521_prv.der":exp:1
+
+Private key write check EC 521 bits (top byte is 0)
+depends_on:3:1:2:5
+1:char*:"data_files/ec_521_short_prv.pem":exp:0
+
+Private key write check EC 521 bits (top byte is 0) (DER)
+depends_on:3:5
+1:char*:"data_files/ec_521_short_prv.der":exp:1
+
+Private key write check EC Brainpool 512 bits
+depends_on:3:1:2:6
+1:char*:"data_files/ec_bp512_prv.pem":exp:0
+
+Private key write check EC Brainpool 512 bits (DER)
+depends_on:3:6
+1:char*:"data_files/ec_bp512_prv.der":exp:1
+
+Private key write check EC X25519
+depends_on:3:1:2:7
+1:char*:"data_files/ec_x25519_prv.pem":exp:0
+
+Private key write check EC X25519 (DER)
+depends_on:3:7
+1:char*:"data_files/ec_x25519_prv.der":exp:1
+
+Private key write check EC X448
+depends_on:3:1:2:8
+1:char*:"data_files/ec_x448_prv.pem":exp:0
+
+Private key write check EC X448 (DER)
+depends_on:3:8
+1:char*:"data_files/ec_x448_prv.der":exp:1
+
+Derive public key RSA
+depends_on:0
+2:char*:"data_files/server1.key.der":char*:"data_files/server1.pubkey.der"
+
+Derive public key RSA 4096
+depends_on:0
+2:char*:"data_files/rsa4096_prv.der":char*:"data_files/rsa4096_pub.der"
+
+Derive public key EC 192 bits
+depends_on:3:4
+2:char*:"data_files/ec_prv.sec1.der":char*:"data_files/ec_pub.der"
+
+Derive public key EC 521 bits
+depends_on:3:5
+2:char*:"data_files/ec_521_prv.der":char*:"data_files/ec_521_pub.der"
+
+Derive public key EC Brainpool 512 bits
+depends_on:3:6
+2:char*:"data_files/ec_bp512_prv.der":char*:"data_files/ec_bp512_pub.der"
+
+Derive public key EC X25519
+depends_on:3:7
+2:char*:"data_files/ec_x25519_prv.der":char*:"data_files/ec_x25519_pub.der"
+
+Derive public key EC X448
+depends_on:3:8
+2:char*:"data_files/ec_x448_prv.der":char*:"data_files/ec_x448_pub.der"
+

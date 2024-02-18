@@ -1,0 +1,132 @@
+PSA dispatch MD5 legacy only
+depends_on:0:1
+11:exp:0:int:0:exp:1
+
+PSA dispatch MD5 driver only
+depends_on:2:3
+11:exp:0:exp:2:exp:3
+
+PSA dispatch MD5 legacy+driver
+depends_on:0:3
+11:exp:0:int:0:exp:3
+
+PSA dispatch RIPEMD160 legacy only
+depends_on:4:5
+11:exp:4:int:0:exp:1
+
+PSA dispatch RIPEMD160 driver only
+depends_on:6:7
+11:exp:4:exp:2:exp:3
+
+PSA dispatch RIPEMD160 legacy+driver
+depends_on:4:7
+11:exp:4:int:0:exp:3
+
+PSA dispatch SHA1 legacy only
+depends_on:8:9
+11:exp:5:int:0:exp:1
+
+PSA dispatch SHA1 driver only
+depends_on:10:11
+11:exp:5:exp:2:exp:3
+
+PSA dispatch SHA1 legacy+driver
+depends_on:8:11
+11:exp:5:int:0:exp:3
+
+PSA dispatch SHA224 legacy only
+depends_on:12:13
+11:exp:6:int:0:exp:1
+
+PSA dispatch SHA224 driver only
+depends_on:14:15
+11:exp:6:exp:2:exp:3
+
+PSA dispatch SHA224 legacy+driver
+depends_on:12:15
+11:exp:6:int:0:exp:3
+
+PSA dispatch SHA256 legacy only
+depends_on:16:17
+11:exp:7:int:0:exp:1
+
+PSA dispatch SHA256 driver only
+depends_on:18:19
+11:exp:7:exp:2:exp:3
+
+PSA dispatch SHA256 legacy+driver
+depends_on:16:19
+11:exp:7:int:0:exp:3
+
+PSA dispatch SHA384 legacy only
+depends_on:20:21
+11:exp:8:int:0:exp:1
+
+PSA dispatch SHA384 driver only
+depends_on:22:23
+11:exp:8:exp:2:exp:3
+
+PSA dispatch SHA384 legacy+driver
+depends_on:20:23
+11:exp:8:int:0:exp:3
+
+PSA dispatch SHA512 legacy only
+depends_on:24:25
+11:exp:9:int:0:exp:1
+
+PSA dispatch SHA512 driver only
+depends_on:26:27
+11:exp:9:exp:2:exp:3
+
+PSA dispatch SHA512 legacy+driver
+depends_on:24:27
+11:exp:9:int:0:exp:3
+
+PSA dispatch SHA3-224 legacy only
+depends_on:28:29
+11:exp:10:int:0:exp:1
+
+PSA dispatch SHA3-224 driver only
+depends_on:30:31
+11:exp:10:exp:2:exp:3
+
+PSA dispatch SHA3-224 legacy+driver
+depends_on:28:31
+11:exp:10:int:0:exp:3
+
+PSA dispatch SHA3-256 legacy only
+depends_on:28:32
+11:exp:11:int:0:exp:1
+
+PSA dispatch SHA3-256 driver only
+depends_on:30:33
+11:exp:11:exp:2:exp:3
+
+PSA dispatch SHA3-256 legacy+driver
+depends_on:28:33
+11:exp:11:int:0:exp:3
+
+PSA dispatch SHA3-384 legacy only
+depends_on:28:34
+11:exp:12:int:0:exp:1
+
+PSA dispatch SHA3-384 driver only
+depends_on:30:35
+11:exp:12:exp:2:exp:3
+
+PSA dispatch SHA3-384 legacy+driver
+depends_on:28:35
+11:exp:12:int:0:exp:3
+
+PSA dispatch SHA3-512 legacy only
+depends_on:28:36
+11:exp:13:int:0:exp:1
+
+PSA dispatch SHA3-512 driver only
+depends_on:30:37
+11:exp:13:exp:2:exp:3
+
+PSA dispatch SHA3-512 legacy+driver
+depends_on:28:37
+11:exp:13:int:0:exp:3
+

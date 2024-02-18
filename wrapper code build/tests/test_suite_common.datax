@@ -1,0 +1,63 @@
+Block xor, length 0
+0:int:0
+
+Block xor, length 1
+0:int:1
+
+Block xor, length 3
+0:int:3
+
+Block xor, length 4
+0:int:4
+
+Block xor, length 7
+0:int:7
+
+Block xor, length 8
+0:int:8
+
+Block xor, length 16
+0:int:16
+
+Block xor, length 64
+0:int:64
+
+Block xor, length 256
+0:int:256
+
+Block xor, length 257
+0:int:257
+
+Block xor, length 16+8
+0:int:24
+
+Block xor, length 16+8+4
+0:int:28
+
+Block xor, length 16+8+4+1
+0:int:29
+
+Block xor, length 16+8+1
+0:int:25
+
+Block xor, length 16+4
+0:int:20
+
+Block xor, length 16+4+1
+0:int:21
+
+Block xor, length 16+1
+0:int:17
+
+Block xor, length 8+4
+0:int:12
+
+Block xor, length 8+4+1
+0:int:13
+
+Block xor, length 8+1
+0:int:9
+
+Block xor, length 4+1
+0:int:5
+

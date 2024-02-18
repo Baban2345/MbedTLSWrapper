@@ -1,0 +1,16 @@
+Constant-flow HMAC: MD5
+depends_on:0
+0:exp:0
+
+Constant-flow HMAC: SHA1
+depends_on:1
+0:exp:1
+
+Constant-flow HMAC: SHA256
+depends_on:2
+0:exp:2
+
+Constant-flow HMAC: SHA384
+depends_on:3
+0:exp:3
+

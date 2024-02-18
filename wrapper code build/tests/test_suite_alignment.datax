@@ -1,0 +1,120 @@
+Aligned 16-bit access
+0:int:16:int:0
+
+Aligned 32-bit access
+0:int:32:int:0
+
+Aligned 64-bit access
+0:int:64:int:0
+
+Unaligned 16-bit access offset=1
+0:int:16:int:1
+
+Unaligned 32-bit access offset=1
+0:int:32:int:1
+
+Unaligned 64-bit access offset=1
+0:int:64:int:1
+
+Unaligned 16-bit access offset=4
+0:int:16:int:4
+
+Unaligned 32-bit access offset=4
+0:int:32:int:4
+
+Unaligned 64-bit access offset=4
+0:int:64:int:4
+
+Unaligned 16-bit access offset=7
+0:int:16:int:7
+
+Unaligned 32-bit access offset=7
+0:int:32:int:7
+
+Unaligned 64-bit access offset=7
+0:int:64:int:7
+
+Unaligned 16-bit access offset=8
+0:int:16:int:8
+
+Unaligned 32-bit access offset=8
+0:int:32:int:8
+
+Unaligned 64-bit access offset=8
+0:int:64:int:8
+
+Byteswap 16
+1:char*:"0100":int:16:char*:"0001"
+
+Byteswap 16 with truncation
+1:char*:"0706050403020100":int:16:char*:"0001"
+
+Byteswap 16 all-zero
+1:char*:"0000":int:16:char*:"0000"
+
+Byteswap 16 all-ones
+1:char*:"ffffffffffffffff":int:16:char*:"ffff"
+
+Byteswap 32
+1:char*:"03020100":int:32:char*:"00010203"
+
+Byteswap 32 with truncation
+1:char*:"0706050403020100":int:32:char*:"00010203"
+
+Byteswap 32 all-zero
+1:char*:"00000000":int:32:char*:"00000000"
+
+Byteswap 32 all-ones
+1:char*:"ffffffffffffffff":int:32:char*:"ffffffff"
+
+Byteswap 64
+1:char*:"0706050403020100":int:64:char*:"01020304050607"
+
+Byteswap 64 all-zero
+1:char*:"0000000000000000":int:64:char*:"0000000000000000"
+
+Byteswap 64 all-ones
+1:char*:"ffffffffffffffff":int:64:char*:"ffffffffffffffff"
+
+Get individual bytes
+2
+
+Endian-aware unaligned 16-bit BE offset=0
+3:int:16:int:0:int:1
+
+Endian-aware unaligned 16-bit BE offset=3
+3:int:16:int:3:int:1
+
+Endian-aware unaligned 16-bit LE offset=0
+3:int:16:int:0:int:0
+
+Endian-aware unaligned 16-bit LE offset=3
+3:int:16:int:3:int:0
+
+Endian-aware unaligned 32-bit BE offset=0
+3:int:32:int:0:int:1
+
+Endian-aware unaligned 32-bit BE offset=3
+3:int:32:int:3:int:1
+
+Endian-aware unaligned 32-bit LE offset=0
+3:int:32:int:0:int:0
+
+Endian-aware unaligned 32-bit LE offset=3
+3:int:32:int:3:int:0
+
+Endian-aware unaligned 64-bit BE offset=0
+3:int:64:int:0:int:1
+
+Endian-aware unaligned 64-bit BE offset=3
+3:int:64:int:3:int:1
+
+Endian-aware unaligned 64-bit LE offset=0
+3:int:64:int:0:int:0
+
+Endian-aware unaligned 64-bit LE offset=3
+3:int:64:int:3:int:0
+
+Big-endian check
+4
+

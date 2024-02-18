@@ -1,0 +1,72 @@
+PKCS#12 derive key: MD5: Zero length password and hash
+depends_on:0
+0:exp:0:int:48:hex:"":exp:1:hex:"":exp:1:int:3:hex:"6afdcbd5ebf943272134f1c3de2dc11b6afdcbd5ebf943272134f1c3de2dc11b6afdcbd5ebf943272134f1c3de2dc11b":int:0
+
+PKCS#12 derive key: MD5: NULL password and hash
+depends_on:0
+0:exp:0:int:48:hex:"":exp:2:hex:"":exp:2:int:3:hex:"6afdcbd5ebf943272134f1c3de2dc11b6afdcbd5ebf943272134f1c3de2dc11b6afdcbd5ebf943272134f1c3de2dc11b":int:0
+
+PKCS#12 derive key: MD5: Zero length password
+depends_on:0
+0:exp:0:int:48:hex:"":exp:1:hex:"0123456789abcdef":exp:1:int:3:hex:"832d8502114fcccfd3de0c2b2863b1c45fb92a8db2ed1e704727b324adc267bdd66ae4918a81fa2d1ba15febfb9e6c4e":int:0
+
+PKCS#12 derive key: MD5: NULL password
+depends_on:0
+0:exp:0:int:48:hex:"":exp:2:hex:"0123456789abcdef":exp:1:int:3:hex:"832d8502114fcccfd3de0c2b2863b1c45fb92a8db2ed1e704727b324adc267bdd66ae4918a81fa2d1ba15febfb9e6c4e":int:0
+
+PKCS#12 derive key: MD5: Invalid length NULL password
+depends_on:0
+0:exp:0:int:48:hex:"0123456789abcdef":exp:2:hex:"0123456789abcdef":exp:1:int:3:hex:"":exp:3
+
+PKCS#12 derive key: MD5: Zero length salt
+depends_on:0
+0:exp:0:int:48:hex:"0123456789abcdef":exp:1:hex:"":exp:1:int:3:hex:"832d8502114fcccfd3de0c2b2863b1c45fb92a8db2ed1e704727b324adc267bdd66ae4918a81fa2d1ba15febfb9e6c4e":int:0
+
+PKCS#12 derive key: MD5: NULL salt
+depends_on:0
+0:exp:0:int:48:hex:"0123456789abcdef":exp:1:hex:"":exp:2:int:3:hex:"832d8502114fcccfd3de0c2b2863b1c45fb92a8db2ed1e704727b324adc267bdd66ae4918a81fa2d1ba15febfb9e6c4e":int:0
+
+PKCS#12 derive key: MD5: Invalid length NULL salt
+depends_on:0
+0:exp:0:int:48:hex:"0123456789abcdef":exp:1:hex:"0123456789abcdef":exp:2:int:3:hex:"":exp:3
+
+PKCS#12 derive key: MD5: Valid password and salt
+depends_on:0
+0:exp:0:int:48:hex:"0123456789abcdef":exp:1:hex:"0123456789abcdef":exp:1:int:3:hex:"46559deeee036836ab1b633ec620178d4c70eacf42f72a2ad7360c812efa09ca3d7567b489a109050345c2dc6a262995":int:0
+
+PBE Encrypt, pad = 7 (OK)
+depends_on:1:2:3:4
+1:exp:4:exp:5:exp:6:hex:"0409CCCCCCCCCCCCCCCCCC02010A":hex:"BBBBBBBBBBBBBBBBBB":hex:"AAAAAAAAAAAAAAAAAA":int:16:int:0:hex:"5F2C15056A36F3A78856E9E662DD27CB"
+
+PBE Encrypt, pad = 8 (OK)
+depends_on:1:2:3:4
+1:exp:4:exp:5:exp:6:hex:"0409CCCCCCCCCCCCCCCCCC02010A":hex:"BBBBBBBBBBBBBBBBBB":hex:"AAAAAAAAAAAAAAAA":int:16:int:0:hex:"5F2C15056A36F3A70F70A3D4EC4004A8"
+
+PBE Encrypt, pad = 8 (Invalid output size)
+depends_on:1:2:3:4
+1:exp:4:exp:5:exp:6:hex:"0409CCCCCCCCCCCCCCCCCC02010A":hex:"BBBBBBBBBBBBBBBBBB":hex:"AAAAAAAAAAAAAAAA":int:15:exp:7:hex:"5F2C15056A36F3A70F70A3D4EC4004A8"
+
+PBE Encrypt, pad = 8 (PKCS7 padding disabled)
+depends_on:1:2:3:5
+1:exp:4:exp:5:exp:6:hex:"0409CCCCCCCCCCCCCCCCCC02010A":hex:"BBBBBBBBBBBBBBBBBB":hex:"AAAAAAAAAAAAAAAA":int:0:exp:8:hex:""
+
+PBE Decrypt, pad = 7 (OK)
+depends_on:1:2:3:4
+2:exp:4:exp:5:exp:6:hex:"0409CCCCCCCCCCCCCCCCCC02010A":hex:"BBBBBBBBBBBBBBBBBB":hex:"5F2C15056A36F3A78856E9E662DD27CB":int:16:int:0:hex:"AAAAAAAAAAAAAAAAAA"
+
+PBE Decrypt, pad = 8 (Invalid output size)
+depends_on:1:2:3:4
+2:exp:4:exp:5:exp:6:hex:"0409CCCCCCCCCCCCCCCCCC02010A":hex:"BBBBBBBBBBBBBBBBBB":hex:"5F2C15056A36F3A70F70A3D4EC4004A8":int:15:exp:7:hex:"AAAAAAAAAAAAAAAA"
+
+PBE Decrypt, pad = 8 (OK)
+depends_on:1:2:3:4
+2:exp:4:exp:5:exp:6:hex:"0409CCCCCCCCCCCCCCCCCC02010A":hex:"BBBBBBBBBBBBBBBBBB":hex:"5F2C15056A36F3A70F70A3D4EC4004A8":int:16:int:0:hex:"AAAAAAAAAAAAAAAA"
+
+PBE Decrypt, (Invalid padding & PKCS7 padding disabled)
+depends_on:1:2:3:5
+2:exp:4:exp:5:exp:6:hex:"0409CCCCCCCCCCCCCCCCCC02010A":hex:"BBBBBBBBBBBBBBBBBB":hex:"5F2C15056A36F3A79F2B90F1428110E2":int:16:int:0:hex:"AAAAAAAAAAAAAAAAAA07070707070708"
+
+PBE Decrypt, (Invalid padding & PKCS7 padding enabled)
+depends_on:1:2:3:4
+2:exp:4:exp:5:exp:6:hex:"0409CCCCCCCCCCCCCCCCCC02010A":hex:"BBBBBBBBBBBBBBBBBB":hex:"5F2C15056A36F3A79F2B90F1428110E2":int:16:exp:9:hex:"AAAAAAAAAAAAAAAAAA07070707070708"
+

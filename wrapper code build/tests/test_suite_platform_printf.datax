@@ -1,0 +1,108 @@
+printf "%d", 0
+0:char*:"%d":int:0:char*:"0"
+
+printf "%d", -0
+0:char*:"%d":int:-0:char*:"0"
+
+printf "%d", 0x0
+0:char*:"%d":int:0x0:char*:"0"
+
+printf "%d", 0x00
+0:char*:"%d":int:0x00:char*:"0"
+
+printf "%d", 0x000000000000000000000000000000000000000000
+0:char*:"%d":int:0x000000000000000000000000000000000000000000:char*:"0"
+
+printf "%d", -0x0
+0:char*:"%d":int:-0x0:char*:"0"
+
+printf "%d", 1
+0:char*:"%d":int:1:char*:"1"
+
+printf "%d", 0x1
+0:char*:"%d":int:0x1:char*:"1"
+
+printf "%d", 0x0000000000000000000000000000000000000000001
+0:char*:"%d":int:0x0000000000000000000000000000000000000000001:char*:"1"
+
+printf "%d", -1
+0:char*:"%d":int:-1:char*:"-1"
+
+printf "%d", -0x1
+0:char*:"%d":int:-0x1:char*:"-1"
+
+printf "%d", -0x0000000000000000000000000000000000000000001
+0:char*:"%d":int:-0x0000000000000000000000000000000000000000001:char*:"-1"
+
+printf "%d", 2147483647
+0:char*:"%d":int:2147483647:char*:"2147483647"
+
+printf "%d", 0x7fffffff
+0:char*:"%d":int:0x7fffffff:char*:"2147483647"
+
+printf "%d", -2147483647
+0:char*:"%d":int:-2147483647:char*:"-2147483647"
+
+printf "%d", -0x7fffffff
+0:char*:"%d":int:-0x7fffffff:char*:"-2147483647"
+
+printf "%d", -2147483648
+0:char*:"%d":exp:0:char*:"-2147483648"
+
+printf "%d", -0x80000000
+0:char*:"%d":exp:1:char*:"-2147483648"
+
+printf "%lx", LONG_MAX
+1:char*:"%lx":exp:2
+
+printf "%c%c", SPACE, SPACE
+2:char*:"%c%c":exp:3:exp:3:char*:"  "
+
+printf "%c%c", NEWLINE, SPACE
+2:char*:"%c%c":exp:4:exp:3:char*:"\n "
+
+printf "%c%c", DOUBLE QUOTE, SPACE
+2:char*:"%c%c":exp:5:exp:3:char*:"\" "
+
+printf "%c%c", COLON, SPACE
+2:char*:"%c%c":exp:6:exp:3:char*:"\: "
+
+printf "%c%c", QUESTION, SPACE
+2:char*:"%c%c":exp:7:exp:3:char*:"? "
+
+printf "%c%c", BACKSLASH, SPACE
+2:char*:"%c%c":exp:8:exp:3:char*:"\\ "
+
+printf "%c%c", SPACE, BACKSLASH
+2:char*:"%c%c":exp:3:exp:8:char*:" \\"
+
+printf "%c%c", COLON, COLON
+2:char*:"%c%c":exp:6:exp:6:char*:"\:\:"
+
+printf "%c%c", COLON, NEWLINE
+2:char*:"%c%c":exp:6:exp:4:char*:"\:\n"
+
+printf "%c%c", QUESTION, QUESTION
+2:char*:"%c%c":exp:7:exp:7:char*:"??"
+
+printf "%c%c", QUESTION, NEWLINE
+2:char*:"%c%c":exp:7:exp:4:char*:"?\n"
+
+printf "%c%c", BACKSLASH, NEWLINE
+2:char*:"%c%c":exp:8:exp:4:char*:"\\\n"
+
+printf "%c%c", BACKSLASH, DOUBLE QUOTE
+2:char*:"%c%c":exp:8:exp:5:char*:"\\\""
+
+printf "%c%c", BACKSLASH, COLON
+2:char*:"%c%c":exp:8:exp:6:char*:"\\\:"
+
+printf "%c%c", BACKSLASH, QUESTION
+2:char*:"%c%c":exp:8:exp:7:char*:"\\?"
+
+printf "%c%c", BACKSLASH, BACKSLASH
+2:char*:"%c%c":exp:8:exp:8:char*:"\\\\"
+
+printf "%c%c", BACKSLASH, n
+2:char*:"%c%c":exp:8:exp:9:char*:"\\n"
+
